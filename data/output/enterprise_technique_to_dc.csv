@@ -1,0 +1,692 @@
+technique_id,technique_name,technique_stix_id,is_subtechnique,dc_ids,dc_names,det_ids,dc_count
+T1001,Data Obfuscation,attack-pattern--ad255bfe-a9e6-4b52-a258-8d3462abe842,False,DC0082;DC0085;DC0032,Network Connection Creation;Network Traffic Content;Process Creation,DET0053,3
+T1001.001,Junk Data,attack-pattern--f7c0689c-4dbd-489b-81be-7cb7c7079ade,True,DC0082;DC0035;DC0085;DC0032,Network Connection Creation;Process Access;Network Traffic Content;Process Creation,DET0011,4
+T1001.002,Steganography,attack-pattern--eec23884-3fa1-4d8a-ac50-6f104d51e235,True,DC0082;DC0039;DC0085;DC0032;DC0059,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;File Metadata,DET0235,5
+T1001.003,Protocol or Service Impersonation,attack-pattern--c325b232-d5bc-4dde-a3ec-71f3db9e8adc,True,DC0082;DC0085;DC0032;DC0034,Network Connection Creation;Network Traffic Content;Process Creation;Process Metadata,DET0470,4
+T1003,OS Credential Dumping,attack-pattern--0a3ead4e-6d47-4ccb-854c-a6a4f9d96b22,False,DC0035;DC0055;DC0032;DC0071;DC0034,Process Access;File Access;Process Creation;Active Directory Object Access;Process Metadata,DET0234,5
+T1003.001,LSASS Memory,attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90,True,DC0035;DC0039;DC0032;DC0013;DC0063,Process Access;File Creation;Process Creation;User Account Metadata;Windows Registry Key Modification,DET0363,5
+T1003.002,Security Account Manager,attack-pattern--1644e709-12d2-41e5-a60f-3470991f5011,True,DC0039;DC0032;DC0061;DC0063,File Creation;Process Creation;File Modification;Windows Registry Key Modification,DET0085,4
+T1003.003,NTDS,attack-pattern--edf91964-b26e-4b4a-9600-ccacd7d7df24,True,DC0039;DC0032;DC0061;DC0097,File Creation;Process Creation;File Modification;Volume Creation,DET0586,4
+T1003.004,LSA Secrets,attack-pattern--1ecfdab8-7d59-4c98-95d4-dc41970f57fc,True,DC0035;DC0032;DC0061;DC0016,Process Access;Process Creation;File Modification;Module Load,DET0437,4
+T1003.005,Cached Domain Credentials,attack-pattern--6add2ab5-2711-4e9d-87c8-7a0be8531530,True,DC0035;DC0055;DC0032,Process Access;File Access;Process Creation,DET0513,3
+T1003.006,DCSync,attack-pattern--f303a39a-6255-4b89-aecc-18c4d8ca7163,True,DC0085;DC0071;DC0068,Network Traffic Content;Active Directory Object Access;Active Directory Object Deletion,DET0594,3
+T1003.007,Proc Filesystem,attack-pattern--3120b9fa-23b8-4500-ae73-09494f607b7d,True,DC0035;DC0055;DC0032;DC0061,Process Access;File Access;Process Creation;File Modification,DET0593,4
+T1003.008,/etc/passwd and /etc/shadow,attack-pattern--d0b4fcdb-d67d-4ed2-99ce-788b12f8c0f4,True,DC0055;DC0032,File Access;Process Creation,DET0446,2
+T1005,Data from Local System,attack-pattern--3c4a2599-71ee-4405-ba1e-0e28414b4bc5,False,DC0055;DC0039;DC0032;DC0064,File Access;File Creation;Process Creation;Command Execution,DET0380,4
+T1006,Direct Volume Access,attack-pattern--0c8ab3eb-df48-4b9c-ace7-beacaac81cc5,False,DC0035;DC0032;DC0064,Process Access;Process Creation;Command Execution,DET0426,3
+T1007,System Service Discovery,attack-pattern--322bad5a-1c49-4d23-ab79-76d641794afa,False,DC0032;DC0064,Process Creation;Command Execution,DET0483,2
+T1008,Fallback Channels,attack-pattern--f24faf46-3b26-4dbb-98f2-63460498e433,False,DC0082;DC0078,Network Connection Creation;Network Traffic Flow,DET0499,2
+T1010,Application Window Discovery,attack-pattern--4ae4f953-fe58-4cc8-a327-33257e30a830,False,DC0035;DC0032;DC0064;DC0021,Process Access;Process Creation;Command Execution;OS API Execution,DET0097,4
+T1011,Exfiltration Over Other Network Medium,attack-pattern--51ea26b1-ff1e-4faa-b1a0-1114cd298c87,False,DC0082;DC0039;DC0085;DC0032;DC0064;DC0018;DC0078,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;Command Execution;Host Status;Network Traffic Flow,DET0077,7
+T1011.001,Exfiltration Over Bluetooth,attack-pattern--613d08bc-e8f4-4791-80b0-c8b974340dfd,True,DC0082;DC0055;DC0039;DC0032;DC0064,Network Connection Creation;File Access;File Creation;Process Creation;Command Execution,DET0554,5
+T1012,Query Registry,attack-pattern--c32f7008-9fea-41f7-8366-5eb9b74bd896,False,DC0032;DC0064;DC0063,Process Creation;Command Execution;Windows Registry Key Modification,DET0209,3
+T1014,Rootkit,attack-pattern--0f20e3cb-245b-4a61-8a91-2d93f7cb0e9b,False,DC0039;DC0079;DC0032;DC0060;DC0061;DC0016,File Creation;Driver Load;Process Creation;Service Creation;File Modification;Module Load,DET0377,6
+T1016,System Network Configuration Discovery,attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0,False,DC0032;DC0064,Process Creation;Command Execution,DET0195,2
+T1016.001,Internet Connection Discovery,attack-pattern--132d5b37-aac5-4378-a8dc-3127b18a73dc,True,DC0082;DC0032;DC0064;DC0029,Network Connection Creation;Process Creation;Command Execution;Script Execution,DET0357,4
+T1016.002,Wi-Fi Discovery,attack-pattern--494ab9f0-36e0-4b06-b10d-57285b040a06,True,DC0055;DC0032;DC0064,File Access;Process Creation;Command Execution,DET0464,3
+T1018,Remote System Discovery,attack-pattern--e358d692-23c0-4a31-9eb6-ecc13a8d7735,False,DC0082;DC0055;DC0032;DC0064,Network Connection Creation;File Access;Process Creation;Command Execution,DET0574,4
+T1020,Automated Exfiltration,attack-pattern--774a3188-6ba9-4dc4-879d-d54ee48a5ce9,False,DC0082;DC0032;DC0001,Network Connection Creation;Process Creation;Scheduled Job Creation,DET0397,3
+T1020.001,Traffic Duplication,attack-pattern--7c46b364-8496-4234-8a56-f7e6727e21e1,True,DC0082;DC0078,Network Connection Creation;Network Traffic Flow,DET0403,2
+T1021,Remote Services,attack-pattern--54a649ff-439a-41a4-9856-8d144a2551ba,False,DC0082;DC0032;DC0064;DC0067,Network Connection Creation;Process Creation;Command Execution;Logon Session Creation,DET0269,4
+T1021.001,Remote Desktop Protocol,attack-pattern--eb062747-2193-45de-8fa2-e62549c37ddf,True,DC0082;DC0088;DC0032;DC0067,Network Connection Creation;Logon Session Metadata;Process Creation;Logon Session Creation,DET0327,4
+T1021.002,SMB/Windows Admin Shares,attack-pattern--4f9ca633-15c5-463c-9724-bdcd54fde541,True,DC0082;DC0032;DC0067,Network Connection Creation;Process Creation;Logon Session Creation,DET0530,3
+T1021.003,Distributed Component Object Model,attack-pattern--68a0c5ed-bee2-4513-830d-5b0d650139bd,True,DC0082;DC0032;DC0067;DC0016,Network Connection Creation;Process Creation;Logon Session Creation;Module Load,DET0285,4
+T1021.004,SSH,attack-pattern--2db31dcd-54da-405d-acef-b9129b816ed6,True,DC0085;DC0088;DC0032;DC0064;DC0067;DC0078,Network Traffic Content;Logon Session Metadata;Process Creation;Command Execution;Logon Session Creation;Network Traffic Flow,DET0596,6
+T1021.005,VNC,attack-pattern--01327cde-66c4-4123-bf34-5f258d59457b,True,DC0088;DC0032;DC0067;DC0078,Logon Session Metadata;Process Creation;Logon Session Creation;Network Traffic Flow,DET0178,4
+T1021.006,Windows Remote Management,attack-pattern--60d0c01d-e2bf-49dd-a453-f8a9c9fa6f65,True,DC0032;DC0041;DC0067;DC0078,Process Creation;Service Metadata;Logon Session Creation;Network Traffic Flow,DET0477,4
+T1021.007,Cloud Services,attack-pattern--8861073d-d1b8-4941-82ce-dce621d398f0,True,DC0055;DC0064;DC0067,File Access;Command Execution;Logon Session Creation,DET0008,3
+T1021.008,Direct Cloud VM Connections,attack-pattern--45241b9e-9bbc-4826-a2cc-78855e51ca09,True,DC0032;DC0067,Process Creation;Logon Session Creation,DET0211,2
+T1025,Data from Removable Media,attack-pattern--1b7ba276-eedc-4951-a762-0ceea2c030ec,False,DC0055;DC0032;DC0042,File Access;Process Creation;Drive Creation,DET0511,3
+T1027,Obfuscated Files or Information,attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a,False,DC0039;DC0085;DC0032;DC0059;DC0064;DC0061;DC0021,File Creation;Network Traffic Content;Process Creation;File Metadata;Command Execution;File Modification;OS API Execution,DET0378,7
+T1027.001,Binary Padding,attack-pattern--5bfccc3f-2326-4112-86cc-c1ece9d8a2b5,True,DC0055;DC0039;DC0032,File Access;File Creation;Process Creation,DET0553,3
+T1027.002,Software Packing,attack-pattern--deb98323-e13f-4b0c-8d94-175379069062,True,DC0035;DC0032;DC0020,Process Access;Process Creation;Process Modification,DET0023,3
+T1027.003,Steganography,attack-pattern--c2e147a9-d1a8-4074-811a-d8789202d916,True,DC0082;DC0055;DC0032,Network Connection Creation;File Access;Process Creation,DET0119,3
+T1027.004,Compile After Delivery,attack-pattern--c726e0a2-a57a-4b7b-a973-d0f013246617,True,DC0082;DC0039;DC0032,Network Connection Creation;File Creation;Process Creation,DET0501,3
+T1027.005,Indicator Removal from Tools,attack-pattern--b0533c6e-8fea-4788-874f-b799cacc4b92,True,DC0039;DC0032;DC0059;DC0038;DC0020,File Creation;Process Creation;File Metadata;Application Log Content;Process Modification,DET0189,5
+T1027.006,HTML Smuggling,attack-pattern--d4dc46e3-5ba5-45b9-8204-010867cacfcb,True,DC0039;DC0085;DC0032;DC0059,File Creation;Network Traffic Content;Process Creation;File Metadata,DET0313,4
+T1027.007,Dynamic API Resolution,attack-pattern--ea4c2f9c-9df1-477c-8c42-6da1118f2ac4,True,DC0032;DC0021;DC0016,Process Creation;OS API Execution;Module Load,DET0091,3
+T1027.008,Stripped Payloads,attack-pattern--2f41939b-54c3-41d6-8f8b-35f1ec18ed97,True,DC0039;DC0085;DC0032;DC0059;DC0061,File Creation;Network Traffic Content;Process Creation;File Metadata;File Modification,DET0019,5
+T1027.009,Embedded Payloads,attack-pattern--0533ab23-3f7d-463f-9bd8-634d27e4dee1,True,DC0055;DC0039;DC0032;DC0059;DC0061,File Access;File Creation;Process Creation;File Metadata;File Modification,DET0214,5
+T1027.010,Command Obfuscation,attack-pattern--d511a6f6-4a33-41d5-bc95-c343875d1377,True,DC0032;DC0064,Process Creation;Command Execution,DET0505,2
+T1027.011,Fileless Storage,attack-pattern--02c5abff-30bf-4703-ab92-1f6072fae939,True,DC0008;DC0039;DC0059;DC0063,WMI Creation;File Creation;File Metadata;Windows Registry Key Modification,DET0344,4
+T1027.012,LNK Icon Smuggling,attack-pattern--887274fc-2d63-4bdc-82f3-fae56d1d5fdc,True,DC0082;DC0032;DC0059,Network Connection Creation;Process Creation;File Metadata,DET0405,3
+T1027.013,Encrypted/Encoded File,attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144,True,DC0082;DC0035;DC0032;DC0064;DC0016;DC0020,Network Connection Creation;Process Access;Process Creation;Command Execution;Module Load;Process Modification,DET0087,6
+T1027.014,Polymorphic Code,attack-pattern--b577dfc1-0177-4522-8d5a-782127c8592b,True,DC0035;DC0039;DC0032;DC0061;DC0016;DC0020;DC0034,Process Access;File Creation;Process Creation;File Modification;Module Load;Process Modification;Process Metadata,DET0324,7
+T1027.015,Compression,attack-pattern--fbd91bfc-75c2-4f0c-8116-3b4e722906b3,True,DC0055;DC0039;DC0032;DC0059;DC0061,File Access;File Creation;Process Creation;File Metadata;File Modification,DET0281,5
+T1027.016,Junk Code Insertion,attack-pattern--671cd17f-a765-48fd-adc4-dad1941b1ae3,True,DC0035;DC0039;DC0032;DC0020,Process Access;File Creation;Process Creation;Process Modification,DET0322,4
+T1027.017,SVG Smuggling,attack-pattern--78b9e70d-1605-459c-b23d-e3a25036968c,True,DC0082;DC0039;DC0085;DC0032;DC0061,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;File Modification,DET0510,5
+T1029,Scheduled Transfer,attack-pattern--4eeaf8a9-c86b-4954-a663-9555fb406466,False,DC0082;DC0032;DC0005;DC0078,Network Connection Creation;Process Creation;Scheduled Job Metadata;Network Traffic Flow,DET0399,4
+T1030,Data Transfer Size Limits,attack-pattern--c3888c54-775d-4b2f-b759-75a2ececcbfd,False,DC0082;DC0078,Network Connection Creation;Network Traffic Flow,DET0213,2
+T1033,System Owner/User Discovery,attack-pattern--03d7999c-1f4c-42cc-8373-e7690d318104,False,DC0032;DC0064;DC0021,Process Creation;Command Execution;OS API Execution,DET0093,3
+T1036,Masquerading,attack-pattern--42e8de7b-37b2-4258-905a-6897815e58e0,False,DC0032;DC0060;DC0059;DC0064;DC0041;DC0061;DC0028;DC0034,Process Creation;Service Creation;File Metadata;Command Execution;Service Metadata;File Modification;Image Metadata;Process Metadata,DET0127,8
+T1036.001,Invalid Code Signature,attack-pattern--b4b7458f-81f2-4d38-84be-1c5ba0167a52,True,DC0032;DC0059;DC0064;DC0061,Process Creation;File Metadata;Command Execution;File Modification,DET0031,4
+T1036.002,Right-to-Left Override,attack-pattern--77eae145-55db-4519-8ae5-77b0c7215d69,True,DC0055;DC0032;DC0059;DC0064,File Access;Process Creation;File Metadata;Command Execution,DET0527,4
+T1036.003,Rename Legitimate Utilities,attack-pattern--bd5b58a4-a52d-4a29-bc0d-3f1d3968eb6b,True,DC0039;DC0032;DC0059;DC0064;DC0061;DC0034,File Creation;Process Creation;File Metadata;Command Execution;File Modification;Process Metadata,DET0005,6
+T1036.004,Masquerade Task or Service,attack-pattern--7bdca9d5-d500-4d7d-8c52-5fd47baf4c0c,True,DC0032;DC0060;DC0041;DC0005;DC0001;DC0012,Process Creation;Service Creation;Service Metadata;Scheduled Job Metadata;Scheduled Job Creation;Scheduled Job Modification,DET0117,6
+T1036.005,Match Legitimate Resource Name or Location,attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2,True,DC0055;DC0039;DC0032;DC0059;DC0041;DC0028;DC0016;DC0020;DC0034;DC0001,File Access;File Creation;Process Creation;File Metadata;Service Metadata;Image Metadata;Module Load;Process Modification;Process Metadata;Scheduled Job Creation,DET0347,10
+T1036.006,Space after Filename,attack-pattern--e51137a5-1cdc-499e-911a-abaedaa5ac86,True,DC0055;DC0032;DC0059,File Access;Process Creation;File Metadata,DET0292,3
+T1036.007,Double File Extension,attack-pattern--11f29a39-0942-4d62-92b6-fe236cf3066e,True,DC0039;DC0032,File Creation;Process Creation,DET0366,2
+T1036.008,Masquerade File Type,attack-pattern--208884f1-7b83-4473-ac22-4e1cf6c41471,True,DC0039;DC0032;DC0059,File Creation;Process Creation;File Metadata,DET0226,3
+T1036.009,Break Process Trees,attack-pattern--34a80bc4-80f2-46e6-94ff-f3265a4b657c,True,DC0032;DC0021,Process Creation;OS API Execution,DET0443,2
+T1036.010,Masquerade Account Name,attack-pattern--d349c66e-18e1-4d8b-a2d7-65af7cbd2ba0,True,DC0013;DC0010;DC0014,User Account Metadata;User Account Modification;User Account Creation,DET0383,3
+T1036.011,Overwrite Process Arguments,attack-pattern--514dc7b3-0b80-4382-80a9-2e2d294f5019,True,DC0020;DC0034,Process Modification;Process Metadata,DET0164,2
+T1036.012,Browser Fingerprint,attack-pattern--afac5dbc-4383-4fb6-9ba6-45b25d49e530,True,DC0082;DC0085;DC0032;DC0021,Network Connection Creation;Network Traffic Content;Process Creation;OS API Execution,DET0898,4
+T1037,Boot or Logon Initialization Scripts,attack-pattern--03259939-0b57-482f-8eb5-87c0e0d54334,False,DC0055;DC0032;DC0059;DC0041;DC0061;DC0029;DC0063;DC0001,File Access;Process Creation;File Metadata;Service Metadata;File Modification;Script Execution;Windows Registry Key Modification;Scheduled Job Creation,DET0112,8
+T1037.001,Logon Script (Windows),attack-pattern--eb125d40-0b2d-41ac-a71a-3229241c2cd3,True,DC0055;DC0032;DC0067;DC0029,File Access;Process Creation;Logon Session Creation;Script Execution,DET0072,4
+T1037.002,Login Hook,attack-pattern--43ba2b05-cf72-4b6c-8243-03a4aba41ee0,True,DC0032;DC0061,Process Creation;File Modification,DET0244,2
+T1037.003,Network Logon Script,attack-pattern--c63a348e-ffc2-486a-b9d9-d7f11ec54d99,True,DC0032;DC0029;DC0102,Process Creation;Script Execution;Network Share Access,DET0367,3
+T1037.004,RC Scripts,attack-pattern--dca670cf-eeec-438f-8185-fd959d9ef211,True,DC0039;DC0032;DC0064;DC0061;DC0029,File Creation;Process Creation;Command Execution;File Modification;Script Execution,DET0237,5
+T1037.005,Startup Items,attack-pattern--c0dfe7b0-b873-4618-9ff8-53e31f70907f,True,DC0039;DC0032,File Creation;Process Creation,DET0429,2
+T1039,Data from Network Shared Drive,attack-pattern--ae676644-d2d2-41b7-af7e-9bed1b55898c,False,DC0055;DC0039;DC0054;DC0102,File Access;File Creation;Drive Access;Network Share Access,DET0410,4
+T1040,Network Sniffing,attack-pattern--3257eb21-f9a7-4430-8de1-d8b6e288f529,False,DC0085;DC0032;DC0060;DC0064;DC0002;DC0069,Network Traffic Content;Process Creation;Service Creation;Command Execution;User Account Authentication;Cloud Service Modification,DET0314,6
+T1041,Exfiltration Over C2 Channel,attack-pattern--92d7da27-2d91-488e-a00c-059dc162766d,False,DC0082;DC0055;DC0085;DC0032;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Network Traffic Flow,DET0348,5
+T1046,Network Service Discovery,attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88,False,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0376,4
+T1047,Windows Management Instrumentation,attack-pattern--01a5a209-b94c-450b-b7f9-946497d91055,False,DC0008;DC0082;DC0032,WMI Creation;Network Connection Creation;Process Creation,DET0364,3
+T1048,Exfiltration Over Alternative Protocol,attack-pattern--a19e86f8-1c0a-4fea-8407-23b73d615776,False,DC0082;DC0055;DC0039;DC0085;DC0032;DC0025;DC0064;DC0061;DC0078,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Cloud Storage Access;Command Execution;File Modification;Network Traffic Flow,DET0131,9
+T1048.001,Exfiltration Over Symmetric Encrypted Non-C2 Protocol,attack-pattern--79a4052e-1a89-4b09-aea6-51f1d11fe19c,True,DC0082;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0503,5
+T1048.002,Exfiltration Over Asymmetric Encrypted Non-C2 Protocol,attack-pattern--8e350c1d-ac79-4b5c-bd4e-7476d7e84ec5,True,DC0082;DC0055;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0512,6
+T1048.003,Exfiltration Over Unencrypted Non-C2 Protocol,attack-pattern--fb8d023d-45be-47e9-bc51-f56bcae6435b,True,DC0082;DC0055;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0149,6
+T1049,System Network Connections Discovery,attack-pattern--7e150503-88e7-4861-866b-ff1ac82c4475,False,DC0085;DC0032;DC0064;DC0021,Network Traffic Content;Process Creation;Command Execution;OS API Execution,DET0320,4
+T1052,Exfiltration Over Physical Medium,attack-pattern--e6415f09-df0e-48de-9aba-928c902b7549,False,DC0055;DC0039;DC0032;DC0042;DC0064,File Access;File Creation;Process Creation;Drive Creation;Command Execution,DET0123,5
+T1052.001,Exfiltration over USB,attack-pattern--a3e1e6c5-9c74-4fc0-a16c-a9d228c17829,True,DC0055;DC0039;DC0032;DC0042,File Access;File Creation;Process Creation;Drive Creation,DET0220,4
+T1053,Scheduled Task/Job,attack-pattern--35dd844a-b219-4e2b-a6bb-efa9a75995a9,False,DC0039;DC0032;DC0064;DC0061;DC0001,File Creation;Process Creation;Command Execution;File Modification;Scheduled Job Creation,DET0094,5
+T1053.002,At,attack-pattern--f3d95a1f-bba2-44ce-9af7-37866cd63fd0,True,DC0032;DC0064;DC0061;DC0001,Process Creation;Command Execution;File Modification;Scheduled Job Creation,DET0333,4
+T1053.003,Cron,attack-pattern--2acf44aa-542f-4366-b4eb-55ef5747759c,True,DC0032;DC0061;DC0001,Process Creation;File Modification;Scheduled Job Creation,DET0290,3
+T1053.005,Scheduled Task,attack-pattern--005a06c6-14bf-4118-afa0-ebcd8aebb0c9,True,DC0039;DC0032;DC0063;DC0001;DC0012,File Creation;Process Creation;Windows Registry Key Modification;Scheduled Job Creation;Scheduled Job Modification,DET0441,5
+T1053.006,Systemd Timers,attack-pattern--a542bac9-7bc1-4da7-9a09-96f69e23cc21,True,DC0039;DC0032;DC0001,File Creation;Process Creation;Scheduled Job Creation,DET0231,3
+T1053.007,Container Orchestration Job,attack-pattern--1126cab1-c700-412f-a510-61f4937bb096,True,DC0085;DC0072;DC0001,Network Traffic Content;Container Creation;Scheduled Job Creation,DET0206,3
+T1055,Process Injection,attack-pattern--43e7dc91-05b2-474c-b9ac-2ed4fe101f4d,False,DC0035;DC0055;DC0032;DC0021;DC0016;DC0020;DC0034,Process Access;File Access;Process Creation;OS API Execution;Module Load;Process Modification;Process Metadata,DET0508,7
+T1055.001,Dynamic-link Library Injection,attack-pattern--f4599aa0-4f85-4a32-80ea-fc39dc965945,True,DC0035;DC0032;DC0048;DC0016,Process Access;Process Creation;Named Pipe Metadata;Module Load,DET0389,4
+T1055.002,Portable Executable Injection,attack-pattern--806a49c4-970d-43f9-9acc-ac0ee11e6662,True,DC0035;DC0039;DC0032;DC0020,Process Access;File Creation;Process Creation;Process Modification,DET0106,4
+T1055.003,Thread Execution Hijacking,attack-pattern--41d9846c-f6af-4302-a654-24bba2729bc6,True,DC0035;DC0032;DC0021;DC0020,Process Access;Process Creation;OS API Execution;Process Modification,DET0295,4
+T1055.004,Asynchronous Procedure Call,attack-pattern--7c0f17c9-1af6-4628-9cbd-9e45482dd605,True,DC0035;DC0032;DC0021;DC0020,Process Access;Process Creation;OS API Execution;Process Modification,DET0100,4
+T1055.005,Thread Local Storage,attack-pattern--e49ee9d2-0d98-44ef-85e5-5d3100065744,True,DC0035;DC0021;DC0016;DC0020,Process Access;OS API Execution;Module Load;Process Modification,DET0467,4
+T1055.008,Ptrace System Calls,attack-pattern--ea016b56-ae0e-47fe-967a-cc0ad51af67f,True,DC0032;DC0021;DC0034,Process Creation;OS API Execution;Process Metadata,DET0203,3
+T1055.009,Proc Memory,attack-pattern--d201d4cc-214d-4a74-a1ba-b3fa09fd4591,True,DC0055;DC0061;DC0021,File Access;File Modification;OS API Execution,DET0541,3
+T1055.011,Extra Window Memory Injection,attack-pattern--0042a9f5-f053-4769-b3ef-9ad018dfa298,True,DC0035;DC0032;DC0021,Process Access;Process Creation;OS API Execution,DET0217,3
+T1055.012,Process Hollowing,attack-pattern--b200542e-e877-4395-875b-cf1a44537ca4,True,DC0035;DC0032;DC0021;DC0020,Process Access;Process Creation;OS API Execution;Process Modification,DET0382,4
+T1055.013,Process Doppelgänging,attack-pattern--7007935a-a8a7-4c0b-bd98-4e85be8ed197,True,DC0035;DC0039;DC0032;DC0021,Process Access;File Creation;Process Creation;OS API Execution,DET0544,4
+T1055.014,VDSO Hijacking,attack-pattern--98be40f2-c86b-4ade-b6fc-4964932040e5,True,DC0032;DC0021;DC0016;DC0020,Process Creation;OS API Execution;Module Load;Process Modification,DET0448,4
+T1055.015,ListPlanting,attack-pattern--eb2cb5cb-ae87-4de0-8c35-da2a17aafb99,True,DC0035;DC0032;DC0021;DC0020,Process Access;Process Creation;OS API Execution;Process Modification,DET0331,4
+T1056,Input Capture,attack-pattern--bb5a00de-e086-4859-a231-fa793f6797e2,False,DC0082;DC0035;DC0055;DC0085;DC0032;DC0061;DC0021;DC0034,Network Connection Creation;Process Access;File Access;Network Traffic Content;Process Creation;File Modification;OS API Execution;Process Metadata,DET0102,8
+T1056.001,Keylogging,attack-pattern--09a60ea3-a8d1-4ae5-976e-5783248b72a4,True,DC0035;DC0055;DC0085;DC0032;DC0060;DC0021;DC0004;DC0063;DC0034,Process Access;File Access;Network Traffic Content;Process Creation;Service Creation;OS API Execution;Firmware Modification;Windows Registry Key Modification;Process Metadata,DET0089,9
+T1056.002,GUI Input Capture,attack-pattern--a2029942-0a85-4947-b23c-ca434698171d,True,DC0032;DC0064;DC0029,Process Creation;Command Execution;Script Execution,DET0521,3
+T1056.003,Web Portal Capture,attack-pattern--69e5226d-05dc-4f15-95d7-44f5ed78d06e,True,DC0039;DC0085;DC0061,File Creation;Network Traffic Content;File Modification,DET0480,3
+T1056.004,Credential API Hooking,attack-pattern--f5946b5e-9408-485f-a7f7-b5efc88909b6,True,DC0035;DC0055;DC0032;DC0016;DC0020,Process Access;File Access;Process Creation;Module Load;Process Modification,DET0139,5
+T1057,Process Discovery,attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580,False,DC0035;DC0055;DC0032;DC0064;DC0034,Process Access;File Access;Process Creation;Command Execution;Process Metadata,DET0034,5
+T1059,Command and Scripting Interpreter,attack-pattern--7385dfaf-6886-4229-9ecd-6fd678040830,False,DC0032;DC0064;DC0002,Process Creation;Command Execution;User Account Authentication,DET0516,3
+T1059.001,PowerShell,attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736,True,DC0032;DC0064;DC0016;DC0034,Process Creation;Command Execution;Module Load;Process Metadata,DET0455,4
+T1059.002,AppleScript,attack-pattern--37b11151-1776-4f8f-b328-30939fbf2ceb,True,DC0032,Process Creation,DET0414,1
+T1059.003,Windows Command Shell,attack-pattern--d1fcf083-a721-4223-aedf-bf8960798d62,True,DC0032;DC0029;DC0016,Process Creation;Script Execution;Module Load,DET0202,3
+T1059.004,Unix Shell,attack-pattern--a9d4b653-6915-42af-98b2-5758c4ceee56,True,DC0082;DC0032;DC0064;DC0067;DC0029;DC0078,Network Connection Creation;Process Creation;Command Execution;Logon Session Creation;Script Execution;Network Traffic Flow,DET0384,6
+T1059.005,Visual Basic,attack-pattern--dfd7cc1d-e1d8-4394-a198-97c4cab8aa67,True,DC0032;DC0064;DC0029;DC0016,Process Creation;Command Execution;Script Execution;Module Load,DET0076,4
+T1059.006,Python,attack-pattern--cc3502b5-30cc-4473-ad48-42d51a6ef6d1,True,DC0085;DC0032;DC0064;DC0029,Network Traffic Content;Process Creation;Command Execution;Script Execution,DET0063,4
+T1059.007,JavaScript,attack-pattern--0f4a0c76-ab2d-4cb0-85d3-3f0efb8cba0d,True,DC0032;DC0064;DC0029;DC0016,Process Creation;Command Execution;Script Execution;Module Load,DET0264,4
+T1059.008,Network Device CLI,attack-pattern--818302b2-d640-477b-bf88-873120ce85c4,True,DC0085;DC0064;DC0002,Network Traffic Content;Command Execution;User Account Authentication,DET0142,3
+T1059.009,Cloud API,attack-pattern--55bb4471-ff1f-43b4-88c1-c9384ec47abf,True,DC0064;DC0002;DC0069,Command Execution;User Account Authentication;Cloud Service Modification,DET0078,3
+T1059.010,AutoHotKey & AutoIT,attack-pattern--3a32740a-11b0-4bcf-b0a9-3abd0f6d3cd5,True,DC0035;DC0039;DC0032,Process Access;File Creation;Process Creation,DET0332,3
+T1059.011,Lua,attack-pattern--afddee82-3385-4682-ad90-eeced33f2d07,True,DC0039;DC0032;DC0059;DC0064;DC0029,File Creation;Process Creation;File Metadata;Command Execution;Script Execution,DET0101,5
+T1059.012,Hypervisor CLI,attack-pattern--d2d642da-61ff-4211-b4df-7923c9ca220c,True,DC0064;DC0002,Command Execution;User Account Authentication,DET0558,2
+T1059.013,Container CLI/API,attack-pattern--c283d88f-8c23-4318-9da5-3d50cecad756,True,DC0032;DC0019;DC0077;DC0064;DC0072,Process Creation;Pod Creation;Container Start;Command Execution;Container Creation,DET0083,5
+T1068,Exploitation for Privilege Escalation,attack-pattern--b21c3b2d-02e6-45b1-980b-e69051040839,False,DC0035;DC0079;DC0088;DC0032;DC0091;DC0067;DC0016,Process Access;Driver Load;Logon Session Metadata;Process Creation;Container Enumeration;Logon Session Creation;Module Load,DET0514,7
+T1069,Permission Groups Discovery,attack-pattern--15dbf668-795c-41e6-8219-f0447c0e64ce,False,DC0032;DC0064,Process Creation;Command Execution,DET0179,2
+T1069.001,Local Groups,attack-pattern--a01bf75f-00b2-4568-a58f-565ff9bf202b,True,DC0032,Process Creation,DET0114,1
+T1069.002,Domain Groups,attack-pattern--2aed01ad-3df3-4410-a8cb-11ea4ded587c,True,DC0085;DC0032;DC0064,Network Traffic Content;Process Creation;Command Execution,DET0360,3
+T1069.003,Cloud Groups,attack-pattern--16e94db9-b5b1-4cd0-b851-f38fbd0a70f2,True,DC0064;DC0105;DC0099,Command Execution;Group Metadata;Group Enumeration,DET0251,3
+T1070,Indicator Removal,attack-pattern--799ace7f-e227-4411-baa0-8868704f2a69,False,DC0059;DC0061;DC0038;DC0063;DC0040;DC0012,File Metadata;File Modification;Application Log Content;Windows Registry Key Modification;File Deletion;Scheduled Job Modification,DET0184,6
+T1070.001,Clear Windows Event Logs,attack-pattern--6495ae23-3ab4-43c5-a94f-5638a2c31fd2,True,DC0032;DC0038;DC0040,Process Creation;Application Log Content;File Deletion,DET0532,3
+T1070.002,Clear Linux or Mac System Logs,attack-pattern--2bce5b30-7014-4a5d-ade7-12913fe6ac36,True,DC0032;DC0061;DC0040,Process Creation;File Modification;File Deletion,DET0520,3
+T1070.003,Clear Command History,attack-pattern--3aef9463-9a7a-43ba-8957-a867e07c1e6a,True,DC0032;DC0064;DC0061;DC0040,Process Creation;Command Execution;File Modification;File Deletion,DET0165,4
+T1070.004,File Deletion,attack-pattern--d63a3fb8-9452-4e9d-a60a-54be68d5998c,True,DC0055;DC0032;DC0064;DC0061;DC0040,File Access;Process Creation;Command Execution;File Modification;File Deletion,DET0140,5
+T1070.005,Network Share Connection Removal,attack-pattern--a750a9f6-0bde-4bb3-9aae-1e2786e9780c,True,DC0085;DC0032;DC0064;DC0067,Network Traffic Content;Process Creation;Command Execution;Logon Session Creation,DET0103,4
+T1070.006,Timestomp,attack-pattern--47f2d673-ca62-47e9-929b-1b0be9657611,True,DC0055;DC0032;DC0059;DC0064;DC0061;DC0021,File Access;Process Creation;File Metadata;Command Execution;File Modification;OS API Execution,DET0591,6
+T1070.007,Clear Network Connection History and Configurations,attack-pattern--3975dbb5-0e1e-4f5b-bae1-cf2ab84b46dc,True,DC0085;DC0032;DC0064;DC0061;DC0051;DC0063,Network Traffic Content;Process Creation;Command Execution;File Modification;Firewall Rule Modification;Windows Registry Key Modification,DET0049,6
+T1070.008,Clear Mailbox Data,attack-pattern--438c967d-3996-4870-bfc2-3954752a1927,True,DC0032;DC0064;DC0061;DC0038;DC0040,Process Creation;Command Execution;File Modification;Application Log Content;File Deletion,DET0266,5
+T1070.009,Clear Persistence,attack-pattern--d2c4e5ea-dbdf-4113-805a-b1e2a337fb33,True,DC0032;DC0064;DC0009;DC0063;DC0040;DC0001,Process Creation;Command Execution;User Account Deletion;Windows Registry Key Modification;File Deletion;Scheduled Job Creation,DET0040,6
+T1070.010,Relocate Malware,attack-pattern--cc36eeae-2209-4e63-89d3-c97e19edf280,True,DC0039;DC0064;DC0061;DC0040,File Creation;Command Execution;File Modification;File Deletion,DET0439,4
+T1071,Application Layer Protocol,attack-pattern--355be19c-ffc9-46d5-8d50-d6a036c675b6,False,DC0082;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0444,5
+T1071.001,Web Protocols,attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161,True,DC0082;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0027,5
+T1071.002,File Transfer Protocols,attack-pattern--9a60a291-8960-4387-8a4a-2ab5c18bb50b,True,DC0082;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0416,5
+T1071.003,Mail Protocols,attack-pattern--54b4c251-1f0e-4eba-ba6b-dbc7a6f6f06b,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0135,4
+T1071.004,DNS,attack-pattern--1996eef1-ced3-4d7f-bf94-33298cabbf72,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0400,4
+T1071.005,Publish/Subscribe Protocols,attack-pattern--241f9ea8-f6ae-4f38-92f5-cef5b7e539dd,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0002,4
+T1072,Software Deployment Tools,attack-pattern--92a78814-b191-47ca-909c-1ccfe3777414,False,DC0032;DC0064;DC0038;DC0078,Process Creation;Command Execution;Application Log Content;Network Traffic Flow,DET0223,4
+T1074,Data Staged,attack-pattern--7dd95ff6-712e-4056-9626-312ea4ab4c5e,False,DC0055;DC0039;DC0032;DC0025;DC0064,File Access;File Creation;Process Creation;Cloud Storage Access;Command Execution,DET0014,5
+T1074.001,Local Data Staging,attack-pattern--1c34f7aa-9341-4a48-bfab-af22e51aca6c,True,DC0055;DC0039;DC0032;DC0057;DC0064,File Access;File Creation;Process Creation;Snapshot Creation;Command Execution,DET0261,5
+T1074.002,Remote Data Staging,attack-pattern--359b00ad-9425-420b-bba5-6de8d600cbc0,True,DC0055;DC0039;DC0085;DC0032;DC0025;DC0064;DC0102,File Access;File Creation;Network Traffic Content;Process Creation;Cloud Storage Access;Command Execution;Network Share Access,DET0071,7
+T1078,Valid Accounts,attack-pattern--b17a1a56-e99c-403c-8948-561df0cffe81,False,DC0088;DC0032;DC0067;DC0002,Logon Session Metadata;Process Creation;Logon Session Creation;User Account Authentication,DET0560,4
+T1078.001,Default Accounts,attack-pattern--6151cbea-819b-455a-9fa6-99a1cc58797d,True,DC0088;DC0067;DC0002,Logon Session Metadata;Logon Session Creation;User Account Authentication,DET0465,3
+T1078.002,Domain Accounts,attack-pattern--c3d4bdd9-2cfe-4a80-9d0c-07a29ecdce8f,True,DC0082;DC0088;DC0032;DC0002,Network Connection Creation;Logon Session Metadata;Process Creation;User Account Authentication,DET0210,4
+T1078.003,Local Accounts,attack-pattern--fdc47f44-dd32-4b99-af5f-209f556f63c2,True,DC0088;DC0067;DC0002,Logon Session Metadata;Logon Session Creation;User Account Authentication,DET0407,3
+T1078.004,Cloud Accounts,attack-pattern--f232fa7a-025c-4d43-abc7-318e81a73d65,True,DC0088;DC0067;DC0002,Logon Session Metadata;Logon Session Creation;User Account Authentication,DET0546,3
+T1080,Taint Shared Content,attack-pattern--246fd3c7-f5e3-466d-8787-4c13d9e3b61c,False,DC0039;DC0061;DC0102,File Creation;File Modification;Network Share Access,DET0471,3
+T1082,System Information Discovery,attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1,False,DC0075;DC0032;DC0064,Instance Enumeration;Process Creation;Command Execution,DET0525,3
+T1083,File and Directory Discovery,attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18,False,DC0055;DC0039;DC0032;DC0064,File Access;File Creation;Process Creation;Command Execution,DET0370,4
+T1087,Account Discovery,attack-pattern--72b74d71-8169-42aa-92e0-e7b04b9f5a08,False,DC0055;DC0032;DC0064;DC0083;DC0029;DC0013,File Access;Process Creation;Command Execution;Cloud Service Enumeration;Script Execution;User Account Metadata,DET0587,6
+T1087.001,Local Account,attack-pattern--25659dd6-ea12-45c4-97e6-381e3e4b593e,True,DC0055;DC0032;DC0013,File Access;Process Creation;User Account Metadata,DET0303,3
+T1087.002,Domain Account,attack-pattern--21875073-b0ee-49e3-9077-1e2a885359af,True,DC0085;DC0032;DC0064,Network Traffic Content;Process Creation;Command Execution,DET0129,3
+T1087.003,Email Account,attack-pattern--4bc31b94-045b-4752-8920-aebaebdb6470,True,DC0032;DC0064;DC0038;DC0002;DC0013,Process Creation;Command Execution;Application Log Content;User Account Authentication;User Account Metadata,DET0229,5
+T1087.004,Cloud Account,attack-pattern--8f104855-e5b7-4077-b1f5-bc3103b41abe,True,DC0064;DC0038;DC0002;DC0013,Command Execution;Application Log Content;User Account Authentication;User Account Metadata,DET0386,4
+T1090,Proxy,attack-pattern--731f4f55-b6d0-41d1-a7a9-072a66389aea,False,DC0082;DC0032;DC0064;DC0078;DC0051,Network Connection Creation;Process Creation;Command Execution;Network Traffic Flow;Firewall Rule Modification,DET0445,5
+T1090.001,Internal Proxy,attack-pattern--f6dacc85-b37d-458e-b58d-74fc4bbf5755,True,DC0082;DC0085;DC0032;DC0060;DC0064;DC0078;DC0051,Network Connection Creation;Network Traffic Content;Process Creation;Service Creation;Command Execution;Network Traffic Flow;Firewall Rule Modification,DET0075,7
+T1090.002,External Proxy,attack-pattern--69b8fd78-40e8-4600-ae4d-662c9d7afdb3,True,DC0082;DC0085;DC0032;DC0078;DC0051,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow;Firewall Rule Modification,DET0325,5
+T1090.003,Multi-hop Proxy,attack-pattern--a782ebe2-daba-42c7-bc82-e8e9d923162d,True,DC0082;DC0085;DC0032;DC0078;DC0004,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow;Firmware Modification,DET0359,5
+T1090.004,Domain Fronting,attack-pattern--ca9d3402-ada3-484d-876a-d717bd6e05f2,True,DC0082;DC0085;DC0032,Network Connection Creation;Network Traffic Content;Process Creation,DET0196,3
+T1091,Replication Through Removable Media,attack-pattern--3b744087-9945-4a6f-91e8-9dbceda417a4,False,DC0055;DC0039;DC0032;DC0042,File Access;File Creation;Process Creation;Drive Creation,DET0301,4
+T1092,Communication Through Removable Media,attack-pattern--64196062-5210-42c3-9a02-563a0d1797ef,False,DC0039;DC0032;DC0042,File Creation;Process Creation;Drive Creation,DET0090,3
+T1095,Non-Application Layer Protocol,attack-pattern--c21d5a77-d422-4a69-acd7-2c53c1faa34b,False,DC0082;DC0085;DC0078,Network Connection Creation;Network Traffic Content;Network Traffic Flow,DET0457,3
+T1098,Account Manipulation,attack-pattern--a10641f4-87b4-45a3-a906-92a149cb2c27,False,DC0032;DC0066;DC0061;DC0010,Process Creation;Active Directory Object Modification;File Modification;User Account Modification,DET0096,4
+T1098.001,Additional Cloud Credentials,attack-pattern--8a2f40cf-8325-47f9-96e4-b1ca4c7389bd,True,DC0087;DC0066;DC0010,Active Directory Object Creation;Active Directory Object Modification;User Account Modification,DET0531,3
+T1098.002,Additional Email Delegate Permissions,attack-pattern--e74de37c-a829-446c-937d-56a44f0e9306,True,DC0032;DC0038;DC0010,Process Creation;Application Log Content;User Account Modification,DET0373,3
+T1098.003,Additional Cloud Roles,attack-pattern--2dbbdcd5-92cf-44c0-aea2-fe24783a6bc3,True,DC0010,User Account Modification,DET0277,1
+T1098.004,SSH Authorized Keys,attack-pattern--6b57dc31-b814-4a03-8706-28bc20d739c4,True,DC0032;DC0064;DC0061,Process Creation;Command Execution;File Modification,DET0126,3
+T1098.005,Device Registration,attack-pattern--7decb26c-715c-40cf-b7e0-026f7d7cc215,True,DC0087;DC0038;DC0010,Active Directory Object Creation;Application Log Content;User Account Modification,DET0036,3
+T1098.006,Additional Container Cluster Roles,attack-pattern--35d30338-5bfa-41b0-a170-ec06dfd75f64,True,DC0010,User Account Modification,DET0572,1
+T1098.007,Additional Local or Domain Groups,attack-pattern--3e6831b2-bf4c-4ae6-b328-2e7c6633b291,True,DC0010,User Account Modification,DET0310,1
+T1102,Web Service,attack-pattern--830c9528-df21-472c-8c14-a036bf17d665,False,DC0082;DC0085;DC0078,Network Connection Creation;Network Traffic Content;Network Traffic Flow,DET0425,3
+T1102.001,Dead Drop Resolver,attack-pattern--f7827069-0bf2-4764-af4f-23fae0d181b7,True,DC0082;DC0085;DC0078,Network Connection Creation;Network Traffic Content;Network Traffic Flow,DET0058,3
+T1102.002,Bidirectional Communication,attack-pattern--be055942-6e63-49d7-9fa1-9cb7d8a8f3f4,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0035,4
+T1102.003,One-Way Communication,attack-pattern--9c99724c-a483-4d60-ad9d-7f004e42e8e8,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0581,4
+T1104,Multi-Stage Channels,attack-pattern--84e02621-8fdf-470f-bd58-993bb6a89d91,False,DC0082;DC0032;DC0078,Network Connection Creation;Process Creation;Network Traffic Flow,DET0228,3
+T1105,Ingress Tool Transfer,attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add,False,DC0082;DC0039;DC0032;DC0064;DC0078,Network Connection Creation;File Creation;Process Creation;Command Execution;Network Traffic Flow,DET0060,5
+T1106,Native API,attack-pattern--391d824f-0ef1-47a0-b0ee-c59a75e27670,False,DC0035;DC0032;DC0016,Process Access;Process Creation;Module Load,DET0529,3
+T1110,Brute Force,attack-pattern--a93494bb-4b80-4ea1-8695-3236a49916fd,False,DC0002,User Account Authentication,DET0463,1
+T1110.001,Password Guessing,attack-pattern--09c4c11e-4fa1-4f8c-8dad-3cf8e69ad119,True,DC0002,User Account Authentication,DET0551,1
+T1110.002,Password Cracking,attack-pattern--1d24cdee-9ea2-4189-b08e-af110bf2435d,True,DC0035;DC0055;DC0039;DC0032;DC0002,Process Access;File Access;File Creation;Process Creation;User Account Authentication,DET0105,5
+T1110.003,Password Spraying,attack-pattern--692074ae-bb62-4a5e-a735-02cb6bde458c,True,DC0002,User Account Authentication,DET0487,1
+T1110.004,Credential Stuffing,attack-pattern--b2d03cea-aec1-45ca-9744-9ee583c1e1cc,True,DC0002,User Account Authentication,DET0460,1
+T1111,Multi-Factor Authentication Interception,attack-pattern--dd43c543-bb85-4a6f-aa6e-160d90d06a49,False,DC0035;DC0079;DC0032;DC0021;DC0067;DC0063,Process Access;Driver Load;Process Creation;OS API Execution;Logon Session Creation;Windows Registry Key Modification,DET0246,6
+T1112,Modify Registry,attack-pattern--57340c81-c025-4189-8fa0-fc7ede51bae4,False,DC0032;DC0063,Process Creation;Windows Registry Key Modification,DET0280,2
+T1113,Screen Capture,attack-pattern--0259baeb-9f63-4c69-bf10-eb038c390688,False,DC0032;DC0016,Process Creation;Module Load,DET0346,2
+T1114,Email Collection,attack-pattern--1608f3e1-598a-42f4-a01a-2e252e81728f,False,DC0082;DC0055;DC0032;DC0064;DC0038;DC0067;DC0102,Network Connection Creation;File Access;Process Creation;Command Execution;Application Log Content;Logon Session Creation;Network Share Access,DET0476,7
+T1114.001,Local Email Collection,attack-pattern--1e9eb839-294b-48cc-b0d3-c45555a2a004,True,DC0082;DC0055;DC0039;DC0032,Network Connection Creation;File Access;File Creation;Process Creation,DET0047,4
+T1114.002,Remote Email Collection,attack-pattern--b4694861-542c-48ea-9eb1-10d356e7140a,True,DC0082;DC0064;DC0038;DC0067,Network Connection Creation;Command Execution;Application Log Content;Logon Session Creation,DET0048,4
+T1114.003,Email Forwarding Rule,attack-pattern--7d77a07d-02fe-4e88-8bd9-e9c008c01bf0,True,DC0032;DC0064;DC0061;DC0038;DC0070,Process Creation;Command Execution;File Modification;Application Log Content;Cloud Service Metadata,DET0576,5
+T1115,Clipboard Data,attack-pattern--30973a08-aed9-4edf-8604-9084ce1b5c4f,False,DC0035;DC0032,Process Access;Process Creation,DET0341,2
+T1119,Automated Collection,attack-pattern--30208d3e-0d6b-43c8-883e-44462a514619,False,DC0055;DC0039;DC0032;DC0029;DC0002,File Access;File Creation;Process Creation;Script Execution;User Account Authentication,DET0186,5
+T1120,Peripheral Device Discovery,attack-pattern--348f1eef-964b-4eb6-bb53-69b3dcb0c643,False,DC0035;DC0055;DC0032;DC0054,Process Access;File Access;Process Creation;Drive Access,DET0491,4
+T1123,Audio Capture,attack-pattern--1035cdf2-3e5f-446f-a7a7-e8f6d7925967,False,DC0035;DC0055;DC0039;DC0032;DC0021,Process Access;File Access;File Creation;Process Creation;OS API Execution,DET0221,5
+T1124,System Time Discovery,attack-pattern--f3c544dc-673c-4ef3-accb-53229f1ae077,False,DC0035;DC0039;DC0032;DC0064;DC0005;DC0061;DC0021;DC0002;DC0016;DC0034;DC0001,Process Access;File Creation;Process Creation;Command Execution;Scheduled Job Metadata;File Modification;OS API Execution;User Account Authentication;Module Load;Process Metadata;Scheduled Job Creation,DET0151,11
+T1125,Video Capture,attack-pattern--6faf650d-bf31-4eb4-802d-1000cf38efaf,False,DC0082;DC0055;DC0039;DC0085;DC0032;DC0064;DC0021;DC0016;DC0034,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Command Execution;OS API Execution;Module Load;Process Metadata,DET0197,9
+T1127,Trusted Developer Utilities Proxy Execution,attack-pattern--ff25900d-76d5-449b-a351-8824e62fc81b,False,DC0082;DC0039;DC0032;DC0016;DC0034,Network Connection Creation;File Creation;Process Creation;Module Load;Process Metadata,DET0172,5
+T1127.001,MSBuild,attack-pattern--c92e3d68-2349-49e4-a341-7edca2deff96,True,DC0082;DC0035;DC0039;DC0032;DC0029;DC0016;DC0020;DC0034,Network Connection Creation;Process Access;File Creation;Process Creation;Script Execution;Module Load;Process Modification;Process Metadata,DET0556,8
+T1127.002,ClickOnce,attack-pattern--cc279e50-df85-4c8e-be80-6dc2eda8849c,True,DC0032;DC0016;DC0034,Process Creation;Module Load;Process Metadata,DET0191,3
+T1127.003,JamPlus,attack-pattern--7d356151-a69d-404e-896b-71618952702a,True,DC0082;DC0039;DC0032;DC0034,Network Connection Creation;File Creation;Process Creation;Process Metadata,DET0585,4
+T1129,Shared Modules,attack-pattern--0a5231ec-41af-4a35-83d0-6bdf11f28c65,False,DC0082;DC0055;DC0039;DC0085;DC0032;DC0016;DC0034,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Module Load;Process Metadata,DET0018,7
+T1132,Data Encoding,attack-pattern--cc7b8c4e-9be0-47ca-b0bb-83915ec3ee2f,False,DC0082;DC0085;DC0032;DC0064;DC0002,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;User Account Authentication,DET0108,5
+T1132.001,Standard Encoding,attack-pattern--04fd5427-79c7-44ea-ae13-11b24778ff1c,True,DC0082;DC0085;DC0032;DC0038;DC0029;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Script Execution;Network Traffic Flow,DET0124,6
+T1132.002,Non-Standard Encoding,attack-pattern--d467bc38-284b-4a00-96ac-125f447799fc,True,DC0082;DC0085;DC0032;DC0038;DC0029;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Script Execution;Network Traffic Flow,DET0326,6
+T1133,External Remote Services,attack-pattern--10d51417-ee35-4589-b1ff-b6df1c334e8d,False,DC0082;DC0088;DC0038;DC0078;DC0002,Network Connection Creation;Logon Session Metadata;Application Log Content;Network Traffic Flow;User Account Authentication,DET0354,5
+T1134,Access Token Manipulation,attack-pattern--dcaa092b-7de9-4a21-977f-7fcb77e89c48,False,DC0035;DC0088;DC0032;DC0066;DC0021,Process Access;Logon Session Metadata;Process Creation;Active Directory Object Modification;OS API Execution,DET0283,5
+T1134.001,Token Impersonation/Theft,attack-pattern--86850eff-2729-40c3-b85e-c4af26da4a2d,True,DC0035;DC0032;DC0021,Process Access;Process Creation;OS API Execution,DET0482,3
+T1134.002,Create Process with Token,attack-pattern--677569f9-a8b0-459e-ab24-7f18091fa7bf,True,DC0035;DC0088;DC0032;DC0066;DC0021,Process Access;Logon Session Metadata;Process Creation;Active Directory Object Modification;OS API Execution,DET0456,5
+T1134.003,Make and Impersonate Token,attack-pattern--8cdeb020-e31e-4f88-a582-f53dcfbda819,True,DC0088;DC0032;DC0021,Logon Session Metadata;Process Creation;OS API Execution,DET0498,3
+T1134.004,Parent PID Spoofing,attack-pattern--93591901-3172-4e94-abf8-6034ab26f44a,True,DC0032;DC0021;DC0034,Process Creation;OS API Execution;Process Metadata,DET0489,3
+T1134.005,SID-History Injection,attack-pattern--b7dc639b-24cd-482d-a7f1-8897eda21023,True,DC0066;DC0021;DC0013,Active Directory Object Modification;OS API Execution;User Account Metadata,DET0136,3
+T1135,Network Share Discovery,attack-pattern--3489cfc5-640f-4bb3-a103-9137b97de79f,False,DC0082;DC0032;DC0064;DC0021;DC0078;DC0048,Network Connection Creation;Process Creation;Command Execution;OS API Execution;Network Traffic Flow;Named Pipe Metadata,DET0182,6
+T1136,Create Account,attack-pattern--e01be9c5-e763-4caf-aeb7-000b416aef67,False,DC0032;DC0064;DC0061;DC0010;DC0014,Process Creation;Command Execution;File Modification;User Account Modification;User Account Creation,DET0583,5
+T1136.001,Local Account,attack-pattern--635cbe30-392d-4e27-978e-66774357c762,True,DC0032;DC0064;DC0061;DC0014,Process Creation;Command Execution;File Modification;User Account Creation,DET0447,4
+T1136.002,Domain Account,attack-pattern--7610cada-1499-41a4-b3dd-46467b68d177,True,DC0032;DC0064;DC0067;DC0002;DC0014,Process Creation;Command Execution;Logon Session Creation;User Account Authentication;User Account Creation,DET0003,5
+T1136.003,Cloud Account,attack-pattern--a009cb25-4801-4116-9105-80a91cf15c1b,True,DC0094;DC0002;DC0010;DC0014,Group Modification;User Account Authentication;User Account Modification;User Account Creation,DET0319,4
+T1137,Office Application Startup,attack-pattern--2c4d4e92-0ccf-4a97-b54c-86d662988a53,False,DC0039;DC0032;DC0038;DC0010;DC0063,File Creation;Process Creation;Application Log Content;User Account Modification;Windows Registry Key Modification,DET0398,5
+T1137.001,Office Template Macros,attack-pattern--79a47ad0-fc3b-4821-9f01-a026b1ddba21,True,DC0039;DC0032;DC0059;DC0064;DC0063,File Creation;Process Creation;File Metadata;Command Execution;Windows Registry Key Modification,DET0519,5
+T1137.002,Office Test,attack-pattern--ed7efd4d-ce28-4a19-a8e6-c58011eb2c7a,True,DC0039;DC0032;DC0064;DC0016;DC0063,File Creation;Process Creation;Command Execution;Module Load;Windows Registry Key Modification,DET0315,5
+T1137.003,Outlook Forms,attack-pattern--a9e2cea0-c805-4bf8-9e31-f5f0513a3634,True,DC0032;DC0064;DC0038;DC0016,Process Creation;Command Execution;Application Log Content;Module Load,DET0029,4
+T1137.004,Outlook Home Page,attack-pattern--bf147104-abf9-4221-95d1-e81585859441,True,DC0032;DC0064;DC0038;DC0016,Process Creation;Command Execution;Application Log Content;Module Load,DET0177,4
+T1137.005,Outlook Rules,attack-pattern--3d1b9d7e-3921-4d25-845a-7d9f15c0da44,True,DC0032;DC0064;DC0038;DC0016,Process Creation;Command Execution;Application Log Content;Module Load,DET0095,4
+T1137.006,Add-ins,attack-pattern--34f1d81d-fe88-4f97-bd3b-a3164536255d,True,DC0039;DC0032;DC0064;DC0061;DC0038;DC0063,File Creation;Process Creation;Command Execution;File Modification;Application Log Content;Windows Registry Key Modification,DET0050,6
+T1140,Deobfuscate/Decode Files or Information,attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c,False,DC0035;DC0039;DC0032;DC0064,Process Access;File Creation;Process Creation;Command Execution,DET0275,4
+T1176,Software Extensions,attack-pattern--389735f1-f21c-4208-b8f0-f8031e7169b8,False,DC0082;DC0039;DC0032;DC0064;DC0078;DC0063,Network Connection Creation;File Creation;Process Creation;Command Execution;Network Traffic Flow;Windows Registry Key Modification,DET0092,6
+T1176.001,Browser Extensions,attack-pattern--278716b1-61ce-4a74-8d17-891d0c494101,True,DC0082;DC0055;DC0039;DC0085;DC0032;DC0064;DC0063,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Command Execution;Windows Registry Key Modification,DET0044,7
+T1176.002,IDE Extensions,attack-pattern--66b34be7-6915-4b83-8d5a-b0f0592b5e41,True,DC0082;DC0039;DC0032;DC0078,Network Connection Creation;File Creation;Process Creation;Network Traffic Flow,DET0561,4
+T1185,Browser Session Hijacking,attack-pattern--544b0346-29ad-41e1-a808-501bb4193f47,False,DC0082;DC0035;DC0088;DC0067;DC0013;DC0016;DC0020,Network Connection Creation;Process Access;Logon Session Metadata;Logon Session Creation;User Account Metadata;Module Load;Process Modification,DET0507,7
+T1187,Forced Authentication,attack-pattern--b77cf5f3-6060-475d-bd60-40ccbf28fdc2,False,DC0039;DC0085;DC0061;DC0078,File Creation;Network Traffic Content;File Modification;Network Traffic Flow,DET0022,4
+T1189,Drive-by Compromise,attack-pattern--d742a578-d70e-4d0e-96a6-02a9c30204e6,False,DC0082;DC0039;DC0085;DC0032;DC0038;DC0067;DC0002;DC0013;DC0020,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;Application Log Content;Logon Session Creation;User Account Authentication;User Account Metadata;Process Modification,DET0176,9
+T1190,Exploit Public-Facing Application,attack-pattern--3f886f2a-874f-4333-b794-aa6075009b1c,False,DC0082;DC0085;DC0032;DC0038;DC0078;DC0016,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow;Module Load,DET0080,6
+T1195,Supply Chain Compromise,attack-pattern--3f18edba-28f4-4bb9-82c3-8aa60dcac5f7,False,DC0039;DC0032;DC0059;DC0061;DC0078;DC0016;DC0020,File Creation;Process Creation;File Metadata;File Modification;Network Traffic Flow;Module Load;Process Modification,DET0537,7
+T1195.001,Compromise Software Dependencies and Development Tools,attack-pattern--191cc6af-1bb2-4344-ab5f-28e496638720,True,DC0039;DC0032;DC0059;DC0078;DC0016;DC0020;DC0063,File Creation;Process Creation;File Metadata;Network Traffic Flow;Module Load;Process Modification;Windows Registry Key Modification,DET0009,7
+T1195.002,Compromise Software Supply Chain,attack-pattern--bd369cd9-abb8-41ce-b5bb-fff23ee86c00,True,DC0082;DC0039;DC0079;DC0032;DC0059;DC0078;DC0016;DC0063,Network Connection Creation;File Creation;Driver Load;Process Creation;File Metadata;Network Traffic Flow;Module Load;Windows Registry Key Modification,DET0309,8
+T1195.003,Compromise Hardware Supply Chain,attack-pattern--39131305-9282-45e4-ac3b-591d2d4fc3ef,True,DC0035;DC0079;DC0059;DC0018;DC0016,Process Access;Driver Load;File Metadata;Host Status;Module Load,DET0368,5
+T1197,BITS Jobs,attack-pattern--c8e87b83-edbb-48d4-9295-4974897525b7,False,DC0082;DC0032;DC0060;DC0064,Network Connection Creation;Process Creation;Service Creation;Command Execution,DET0098,4
+T1199,Trusted Relationship,attack-pattern--9fa07bef-9c81-421e-a8e5-ad4366c5a925,False,DC0082;DC0085;DC0088;DC0038;DC0067,Network Connection Creation;Network Traffic Content;Logon Session Metadata;Application Log Content;Logon Session Creation,DET0488,5
+T1200,Hardware Additions,attack-pattern--d40239b3-05ff-46d8-9bdd-b46d13463ef9,False,DC0082;DC0039;DC0079;DC0032;DC0042;DC0038;DC0078;DC0016,Network Connection Creation;File Creation;Driver Load;Process Creation;Drive Creation;Application Log Content;Network Traffic Flow;Module Load,DET0069,8
+T1201,Password Policy Discovery,attack-pattern--b6075259-dba3-44e9-87c7-e954f37ec0d5,False,DC0032;DC0071;DC0064;DC0013,Process Creation;Active Directory Object Access;Command Execution;User Account Metadata,DET0161,4
+T1202,Indirect Command Execution,attack-pattern--3b0e52ce-517a-4614-a523-1bd5deef6c5e,False,DC0082;DC0039;DC0032,Network Connection Creation;File Creation;Process Creation,DET0200,3
+T1203,Exploitation for Client Execution,attack-pattern--be2dcee9-a7a7-4e38-afd6-21b31ecc3d63,False,DC0082;DC0055;DC0039;DC0032;DC0061;DC0038;DC0078,Network Connection Creation;File Access;File Creation;Process Creation;File Modification;Application Log Content;Network Traffic Flow,DET0287,7
+T1204,User Execution,attack-pattern--8c32eb4d-805f-4fc5-bf60-c4d476c131b5,False,DC0082;DC0055;DC0039;DC0085;DC0032;DC0077;DC0061;DC0038;DC0072;DC0076;DC0080,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Container Start;File Modification;Application Log Content;Container Creation;Instance Creation;Instance Start,DET0478,11
+T1204.001,Malicious Link,attack-pattern--ef67e13e-5598-4adc-bdb2-998225874fa9,True,DC0082;DC0039;DC0085;DC0032,Network Connection Creation;File Creation;Network Traffic Content;Process Creation,DET0066,4
+T1204.002,Malicious File,attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e,True,DC0039;DC0032;DC0059,File Creation;Process Creation;File Metadata,DET0294,3
+T1204.003,Malicious Image,attack-pattern--b0c74ef9-c61e-4986-88cb-78da98a355ec,True,DC0085;DC0032;DC0077;DC0064;DC0072;DC0015;DC0076;DC0080,Network Traffic Content;Process Creation;Container Start;Command Execution;Container Creation;Image Creation;Instance Creation;Instance Start,DET0248,8
+T1204.004,Malicious Copy and Paste,attack-pattern--e261a979-f354-41a8-963e-6cadac27c4bf,True,DC0082;DC0039;DC0085;DC0032;DC0064,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;Command Execution,DET0340,5
+T1204.005,Malicious Library,attack-pattern--73b24a10-6bf4-4af1-a81e-67b8bcb6c4e6,True,DC0082;DC0039;DC0085;DC0032;DC0059,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;File Metadata,DET0252,5
+T1205,Traffic Signaling,attack-pattern--451a9977-d255-43c9-b431-66de80130c8c,False,DC0082;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0524,5
+T1205.001,Port Knocking,attack-pattern--8868cb5b-d575-4a60-acb2-07d37389a2fd,True,DC0082;DC0032;DC0078,Network Connection Creation;Process Creation;Network Traffic Flow,DET0302,3
+T1205.002,Socket Filters,attack-pattern--005cc321-08ce-4d17-b1ea-cb5275926520,True,DC0082;DC0079;DC0085;DC0032;DC0060;DC0016,Network Connection Creation;Driver Load;Network Traffic Content;Process Creation;Service Creation;Module Load,DET0162,6
+T1207,Rogue Domain Controller,attack-pattern--564998d8-ab3e-4123-93fb-eccaa6b9714a,False,DC0084;DC0087;DC0085;DC0066;DC0071,Active Directory Credential Request;Active Directory Object Creation;Network Traffic Content;Active Directory Object Modification;Active Directory Object Access,DET0276,5
+T1210,Exploitation of Remote Services,attack-pattern--9db0cf3a-a3c9-4012-8268-123b9db6fd82,False,DC0082;DC0035;DC0039;DC0085;DC0032;DC0038;DC0016,Network Connection Creation;Process Access;File Creation;Network Traffic Content;Process Creation;Application Log Content;Module Load,DET0118,7
+T1211,Exploitation for Defense Evasion,attack-pattern--fe926152-f431-4baf-956c-4ad3cb0bf23b,False,DC0032;DC0038;DC0016,Process Creation;Application Log Content;Module Load,DET0595,3
+T1212,Exploitation for Credential Access,attack-pattern--9c306d8d-cde7-4b4c-b6e8-d0bb16caca36,False,DC0035;DC0032;DC0038;DC0002,Process Access;Process Creation;Application Log Content;User Account Authentication,DET0174,4
+T1213,Data from Information Repositories,attack-pattern--d28ef391-8ed4-45dc-bc4a-2f43abf54416,False,DC0082;DC0055;DC0032;DC0025;DC0064;DC0038;DC0069;DC0102,Network Connection Creation;File Access;Process Creation;Cloud Storage Access;Command Execution;Application Log Content;Cloud Service Modification;Network Share Access,DET0413,8
+T1213.001,Confluence,attack-pattern--7ad38ef1-381a-406d-872a-38b136eb5ecc,True,DC0085;DC0038;DC0067,Network Traffic Content;Application Log Content;Logon Session Creation,DET0358,3
+T1213.002,Sharepoint,attack-pattern--0c4b4fda-9062-47da-98b9-ceae2dcf052a,True,DC0038;DC0067;DC0070,Application Log Content;Logon Session Creation;Cloud Service Metadata,DET0500,3
+T1213.003,Code Repositories,attack-pattern--cff94884-3b1c-4987-a70b-6d5643c621c3,True,DC0038;DC0067;DC0070,Application Log Content;Logon Session Creation;Cloud Service Metadata,DET0263,3
+T1213.004,Customer Relationship Management Software,attack-pattern--bbfbb096-6561-4d7d-aa2c-a5ee8e44c696,True,DC0038;DC0067,Application Log Content;Logon Session Creation,DET0550,2
+T1213.005,Messaging Applications,attack-pattern--fb75213f-cfb0-40bf-a02f-3bad93d6601e,True,DC0038;DC0067,Application Log Content;Logon Session Creation,DET0567,2
+T1213.006,Databases,attack-pattern--248d3fe1-7fe1-4d71-91c7-8bb7ef35cad3,True,DC0082;DC0055;DC0039;DC0085;DC0032;DC0025;DC0038;DC0070,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Cloud Storage Access;Application Log Content;Cloud Service Metadata,DET0242,8
+T1216,System Script Proxy Execution,attack-pattern--f6fe9070-7a65-49ea-ae72-76292f42cebe,False,DC0035;DC0039;DC0032;DC0064;DC0016,Process Access;File Creation;Process Creation;Command Execution;Module Load,DET0466,5
+T1216.001,PubPrn,attack-pattern--09cd431f-eaf4-4d2a-acaf-2a7acfe7ed58,True,DC0082;DC0032;DC0064;DC0016,Network Connection Creation;Process Creation;Command Execution;Module Load,DET0528,4
+T1216.002,SyncAppvPublishingServer,attack-pattern--e6f19759-dde3-47fc-99cc-d9f5fa4ade60,True,DC0035;DC0032;DC0064;DC0016,Process Access;Process Creation;Command Execution;Module Load,DET0440,4
+T1217,Browser Information Discovery,attack-pattern--5e4a2073-9643-44cb-a0b5-e7f4048446c7,False,DC0055;DC0039;DC0032;DC0064,File Access;File Creation;Process Creation;Command Execution,DET0013,4
+T1218,System Binary Proxy Execution,attack-pattern--457c7820-d331-465a-915e-42f85500ccc4,False,DC0082;DC0032;DC0016,Network Connection Creation;Process Creation;Module Load,DET0081,3
+T1218.001,Compiled HTML File,attack-pattern--a6937325-9321-4e2e-bb2b-3ed2d40b2a9d,True,DC0082;DC0039;DC0032;DC0016,Network Connection Creation;File Creation;Process Creation;Module Load,DET0342,4
+T1218.002,Control Panel,attack-pattern--4ff5d6a8-c062-4c68-a778-36fc5edd564f,True,DC0039;DC0032;DC0056;DC0016,File Creation;Process Creation;Windows Registry Key Creation;Module Load,DET0194,4
+T1218.003,CMSTP,attack-pattern--4cbc6a62-9e34-4f94-8a19-5c1a11392a49,True,DC0082;DC0035;DC0039;DC0032;DC0064;DC0056;DC0063,Network Connection Creation;Process Access;File Creation;Process Creation;Command Execution;Windows Registry Key Creation;Windows Registry Key Modification,DET0328,7
+T1218.004,InstallUtil,attack-pattern--2cd950a6-16c4-404a-aa01-044322395107,True,DC0039;DC0032;DC0064;DC0016,File Creation;Process Creation;Command Execution;Module Load,DET0138,4
+T1218.005,Mshta,attack-pattern--840a987a-99bd-4a80-a5c9-0cb2baa6cade,True,DC0082;DC0039;DC0032,Network Connection Creation;File Creation;Process Creation,DET0506,3
+T1218.007,Msiexec,attack-pattern--365be77f-fc0e-42ee-bac8-4faf806d9336,True,DC0082;DC0032;DC0016,Network Connection Creation;Process Creation;Module Load,DET0158,3
+T1218.008,Odbcconf,attack-pattern--6e3bd510-6b33-41a4-af80-2d80f3ee0071,True,DC0082;DC0032;DC0016,Network Connection Creation;Process Creation;Module Load,DET0486,3
+T1218.009,Regsvcs/Regasm,attack-pattern--c48a67ee-b657-45c1-91bf-6cdbe27205f8,True,DC0082;DC0039;DC0032;DC0064;DC0056;DC0016;DC0063,Network Connection Creation;File Creation;Process Creation;Command Execution;Windows Registry Key Creation;Module Load;Windows Registry Key Modification,DET0361,7
+T1218.010,Regsvr32,attack-pattern--b97f1d35-4249-4486-a6b5-ee60ccf24fab,True,DC0082;DC0032;DC0016,Network Connection Creation;Process Creation;Module Load,DET0282,3
+T1218.011,Rundll32,attack-pattern--045d0922-2310-4e60-b5e4-3302302cb3c5,True,DC0082;DC0039;DC0032;DC0016,Network Connection Creation;File Creation;Process Creation;Module Load,DET0475,4
+T1218.012,Verclsid,attack-pattern--808e6329-ca91-4b87-ac2d-8eadc5f8f327,True,DC0082;DC0032;DC0016;DC0063,Network Connection Creation;Process Creation;Module Load;Windows Registry Key Modification,DET0042,4
+T1218.013,Mavinject,attack-pattern--1bae753e-8e52-4055-a66d-2ead90303ca9,True,DC0082;DC0035;DC0039;DC0032;DC0064;DC0016,Network Connection Creation;Process Access;File Creation;Process Creation;Command Execution;Module Load,DET0433,6
+T1218.014,MMC,attack-pattern--ffbcfdb0-de22-4106-9ed3-fc23c8a01407,True,DC0082;DC0039;DC0032;DC0064;DC0056;DC0021;DC0016;DC0063,Network Connection Creation;File Creation;Process Creation;Command Execution;Windows Registry Key Creation;OS API Execution;Module Load;Windows Registry Key Modification,DET0222,8
+T1218.015,Electron Applications,attack-pattern--561ae9aa-c28a-4144-9eec-e7027a14c8c3,True,DC0082;DC0039;DC0032;DC0016,Network Connection Creation;File Creation;Process Creation;Module Load,DET0025,4
+T1219,Remote Access Tools,attack-pattern--4061e78c-1284-44b4-9116-73e4ac3912f7,False,DC0082;DC0039;DC0032;DC0060;DC0056;DC0063,Network Connection Creation;File Creation;Process Creation;Service Creation;Windows Registry Key Creation;Windows Registry Key Modification,DET0496,6
+T1219.001,IDE Tunneling,attack-pattern--77e29a47-e263-4f11-8692-e5012f44dbac,True,DC0082;DC0039;DC0032,Network Connection Creation;File Creation;Process Creation,DET0133,3
+T1219.002,Remote Desktop Software,attack-pattern--d4287702-e2f7-4946-bdfa-2c7f5aaa5032,True,DC0082;DC0039;DC0032;DC0051,Network Connection Creation;File Creation;Process Creation;Firewall Rule Modification,DET0259,4
+T1219.003,Remote Access Hardware,attack-pattern--a9fb6b3f-4a3c-4703-a4f1-f55f83d1e017,True,DC0042,Drive Creation,DET0159,1
+T1220,XSL Script Processing,attack-pattern--ebbe170d-aa74-4946-8511-9921243415a3,False,DC0032;DC0016,Process Creation;Module Load,DET0205,2
+T1221,Template Injection,attack-pattern--dc31fe1e-d722-49da-8f5f-92c7b5aff534,False,DC0082;DC0032,Network Connection Creation;Process Creation,DET0566,2
+T1222,File and Directory Permissions Modification,attack-pattern--65917ae0-b854-4139-83fe-bf2441cf0196,False,DC0039;DC0032;DC0066;DC0059;DC0064,File Creation;Process Creation;Active Directory Object Modification;File Metadata;Command Execution,DET0299,5
+T1222.001,Windows File and Directory Permissions Modification,attack-pattern--34e793de-0274-4982-9c1a-246ed1c19dee,True,DC0008;DC0039;DC0032;DC0066;DC0059;DC0064,WMI Creation;File Creation;Process Creation;Active Directory Object Modification;File Metadata;Command Execution,DET0418,6
+T1222.002,Linux and Mac File and Directory Permissions Modification,attack-pattern--09b130a2-a77e-4af0-a361-f46f9aad1345,True,DC0032;DC0059;DC0064;DC0061,Process Creation;File Metadata;Command Execution;File Modification,DET0351,4
+T1480,Execution Guardrails,attack-pattern--853c4192-4311-43e1-bfbb-b11b14911852,False,DC0008;DC0082;DC0055;DC0039;DC0032;DC0064;DC0067;DC0002;DC0016;DC0020;DC0063,WMI Creation;Network Connection Creation;File Access;File Creation;Process Creation;Command Execution;Logon Session Creation;User Account Authentication;Module Load;Process Modification;Windows Registry Key Modification,DET0562,11
+T1480.001,Environmental Keying,attack-pattern--f244b8dd-af6c-4391-a497-fc03627ce995,True,DC0008;DC0082;DC0035;DC0055;DC0032;DC0064;DC0067;DC0016,WMI Creation;Network Connection Creation;Process Access;File Access;Process Creation;Command Execution;Logon Session Creation;Module Load,DET0474,8
+T1480.002,Mutual Exclusion,attack-pattern--49fca0d2-685d-41eb-8bd4-05451cc3a742,True,DC0055;DC0039;DC0032;DC0033;DC0021,File Access;File Creation;Process Creation;Process Termination;OS API Execution,DET0132,5
+T1482,Domain Trust Discovery,attack-pattern--767dbf9e-df3f-45cb-8998-4903ab5f80c0,False,DC0035;DC0032;DC0071;DC0064;DC0016,Process Access;Process Creation;Active Directory Object Access;Command Execution;Module Load,DET0007,5
+T1484,Domain or Tenant Policy Modification,attack-pattern--ebb42bbe-62d7-47d7-a55f-3b08b61d792d,False,DC0032;DC0066;DC0061;DC0038;DC0002,Process Creation;Active Directory Object Modification;File Modification;Application Log Content;User Account Authentication,DET0270,5
+T1484.001,Group Policy Modification,attack-pattern--5d2be8b9-d24c-4e98-83bf-2f5f79477163,True,DC0039;DC0032;DC0066;DC0061;DC0010,File Creation;Process Creation;Active Directory Object Modification;File Modification;User Account Modification,DET0305,5
+T1484.002,Trust Modification,attack-pattern--24769ab5-14bd-4f4e-a752-cfb185da53ee,True,DC0032;DC0066;DC0064;DC0038;DC0010,Process Creation;Active Directory Object Modification;Command Execution;Application Log Content;User Account Modification,DET0458,5
+T1485,Data Destruction,attack-pattern--d45a3d09-b3cf-48f4-9f0f-f521ee5cb05c,False,DC0039;DC0098;DC0032;DC0022;DC0033;DC0064;DC0040,File Creation;Volume Deletion;Process Creation;Cloud Storage Deletion;Process Termination;Command Execution;File Deletion,DET0146,7
+T1485.001,Lifecycle-Triggered Deletion,attack-pattern--1001e0d6-ee09-4dfc-aa90-e9320ffc8fe4,True,DC0023,Cloud Storage Modification,DET0041,1
+T1486,Data Encrypted for Impact,attack-pattern--b80d107d-fa0d-4b60-9684-b0433e8bdba0,False,DC0039;DC0032;DC0023;DC0064;DC0061,File Creation;Process Creation;Cloud Storage Modification;Command Execution;File Modification,DET0215,5
+T1489,Service Stop,attack-pattern--20fb2507-d71c-455d-9b6d-6104461cf26b,False,DC0088;DC0032;DC0060;DC0033;DC0041;DC0040,Logon Session Metadata;Process Creation;Service Creation;Process Termination;Service Metadata;File Deletion,DET0021,6
+T1490,Inhibit System Recovery,attack-pattern--f5d8eed6-48a9-4cdf-a3d7-d1ffa99c3d2a,False,DC0049;DC0032;DC0022;DC0064;DC0041;DC0063;DC0040,Snapshot Deletion;Process Creation;Cloud Storage Deletion;Command Execution;Service Metadata;Windows Registry Key Modification;File Deletion,DET0329,7
+T1491,Defacement,attack-pattern--5909f20f-3c39-4795-be06-ef1ea40d350b,False,DC0039;DC0085;DC0032;DC0025;DC0061;DC0038,File Creation;Network Traffic Content;Process Creation;Cloud Storage Access;File Modification;Application Log Content,DET0238,6
+T1491.001,Internal Defacement,attack-pattern--8c41090b-aa47-4331-986b-8c9a51a91103,True,DC0055;DC0039;DC0032;DC0064;DC0061;DC0029;DC0010,File Access;File Creation;Process Creation;Command Execution;File Modification;Script Execution;User Account Modification,DET0082,7
+T1491.002,External Defacement,attack-pattern--0cfe31a7-81fc-472c-bc45-e2808d1066a3,True,DC0039;DC0085;DC0088;DC0032;DC0025;DC0061;DC0017,File Creation;Network Traffic Content;Logon Session Metadata;Process Creation;Cloud Storage Access;File Modification;Cloud Storage Enumeration,DET0590,7
+T1495,Firmware Corruption,attack-pattern--f5bb433e-bdf6-4781-84bc-35e97e43be89,False,DC0079;DC0085;DC0032;DC0004,Driver Load;Network Traffic Content;Process Creation;Firmware Modification,DET0167,4
+T1496,Resource Hijacking,attack-pattern--cd25c1b4-935c-4f0e-ba8d-552f28bc4783,False,DC0082;DC0085;DC0032;DC0018;DC0038;DC0078;DC0069;DC0080,Network Connection Creation;Network Traffic Content;Process Creation;Host Status;Application Log Content;Network Traffic Flow;Cloud Service Modification;Instance Start,DET0267,8
+T1496.001,Compute Hijacking,attack-pattern--a718a0c8-5768-41a1-9958-a1cc3f995e99,True,DC0082;DC0085;DC0032;DC0018;DC0072;DC0078;DC0001;DC0080,Network Connection Creation;Network Traffic Content;Process Creation;Host Status;Container Creation;Network Traffic Flow;Scheduled Job Creation;Instance Start,DET0540,8
+T1496.002,Bandwidth Hijacking,attack-pattern--718cb208-6446-4572-a2f0-9c799c60091e,True,DC0082;DC0085;DC0032;DC0078;DC0080,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow;Instance Start,DET0028,5
+T1496.003,SMS Pumping,attack-pattern--130d4494-b2d6-4040-bcea-6e59f05222fe,True,DC0038;DC0002,Application Log Content;User Account Authentication,DET0156,2
+T1496.004,Cloud Service Hijacking,attack-pattern--924d273c-be0d-4d8d-af58-2dddb15ef1e2,True,DC0038;DC0013;DC0069,Application Log Content;User Account Metadata;Cloud Service Modification,DET0147,3
+T1497,Virtualization/Sandbox Evasion,attack-pattern--82caa33e-d11a-433a-94ea-9b5a5fbef81d,False,DC0032;DC0064;DC0016,Process Creation;Command Execution;Module Load,DET0046,3
+T1497.001,System Checks,attack-pattern--29be378d-262d-4e99-b00d-852d573628e6,True,DC0035;DC0032;DC0016,Process Access;Process Creation;Module Load,DET0168,3
+T1497.002,User Activity Based Checks,attack-pattern--91541e7e-b969-40c6-bbd8-1b5352ec2938,True,DC0035;DC0055;DC0088;DC0032;DC0064;DC0021,Process Access;File Access;Logon Session Metadata;Process Creation;Command Execution;OS API Execution,DET0420,6
+T1497.003,Time Based Checks,attack-pattern--4bed873f-0b7d-41d4-b93a-b6905d1f90b0,True,DC0032;DC0059;DC0021;DC0016,Process Creation;File Metadata;OS API Execution;Module Load,DET0141,4
+T1498,Network Denial of Service,attack-pattern--d74c4a7e-ffbf-432f-9365-7ebf1f787cab,False,DC0082;DC0032;DC0078,Network Connection Creation;Process Creation;Network Traffic Flow,DET0518,3
+T1498.001,Direct Network Flood,attack-pattern--0bda01d5-4c1d-4062-8ee2-6872334383c3,True,DC0082;DC0032;DC0018;DC0078,Network Connection Creation;Process Creation;Host Status;Network Traffic Flow,DET0343,4
+T1498.002,Reflection Amplification,attack-pattern--36b2a1d7-e09e-49bf-b45e-477076c2ec01,True,DC0082;DC0032;DC0064;DC0018;DC0078;DC0051,Network Connection Creation;Process Creation;Command Execution;Host Status;Network Traffic Flow;Firewall Rule Modification,DET0408,6
+T1499,Endpoint Denial of Service,attack-pattern--c675646d-e204-4aa8-978d-e3d6d65885c4,False,DC0032;DC0018;DC0038;DC0078;DC0080,Process Creation;Host Status;Application Log Content;Network Traffic Flow;Instance Start,DET0208,5
+T1499.001,OS Exhaustion Flood,attack-pattern--0df05477-c572-4ed6-88a9-47c581f548f7,True,DC0085;DC0032;DC0018;DC0078,Network Traffic Content;Process Creation;Host Status;Network Traffic Flow,DET0356,4
+T1499.002,Service Exhaustion Flood,attack-pattern--38eb0c22-6caf-46ce-8869-5964bd735858,True,DC0082;DC0035;DC0085;DC0018;DC0038;DC0078;DC0051,Network Connection Creation;Process Access;Network Traffic Content;Host Status;Application Log Content;Network Traffic Flow;Firewall Rule Modification,DET0173,7
+T1499.003,Application Exhaustion Flood,attack-pattern--18cffc21-3260-437e-80e4-4ab8bf2ba5e9,True,DC0085;DC0032;DC0018;DC0038;DC0070,Network Traffic Content;Process Creation;Host Status;Application Log Content;Cloud Service Metadata,DET0415,5
+T1499.004,Application or System Exploitation,attack-pattern--2bee5ffb-7a7a-4119-b1f2-158151b19ac0,True,DC0089;DC0085;DC0032;DC0060;DC0033;DC0038,Instance Stop;Network Traffic Content;Process Creation;Service Creation;Process Termination;Application Log Content,DET0304,6
+T1505,Server Software Component,attack-pattern--d456de47-a16f-4e46-8980-e67478a12dcb,False,DC0085;DC0032;DC0064;DC0038;DC0078;DC0001,Network Traffic Content;Process Creation;Command Execution;Application Log Content;Network Traffic Flow;Scheduled Job Creation,DET0547,6
+T1505.001,SQL Stored Procedures,attack-pattern--f9e9365a-9ca2-4d9c-8e7c-050d73d1101a,True,DC0032;DC0029;DC0016,Process Creation;Script Execution;Module Load,DET0181,3
+T1505.002,Transport Agent,attack-pattern--35187df2-31ed-43b6-a1f5-2f1d3d58d3f1,True,DC0039;DC0032;DC0064;DC0061;DC0038;DC0016,File Creation;Process Creation;Command Execution;File Modification;Application Log Content;Module Load,DET0166,6
+T1505.003,Web Shell,attack-pattern--5d0d3609-d06d-49e1-b9c9-b544e0c618cb,True,DC0039;DC0085;DC0032;DC0061;DC0067,File Creation;Network Traffic Content;Process Creation;File Modification;Logon Session Creation,DET0394,5
+T1505.004,IIS Components,attack-pattern--b46a801b-fd98-491c-a25a-bca25d6e3001,True,DC0039;DC0032;DC0065;DC0061;DC0038;DC0016,File Creation;Process Creation;Service Modification;File Modification;Application Log Content;Module Load,DET0068,6
+T1505.005,Terminal Services DLL,attack-pattern--379809f6-2fac-42c1-bd2e-e9dee70b27f8,True,DC0039;DC0032;DC0016;DC0063,File Creation;Process Creation;Module Load;Windows Registry Key Modification,DET0212,4
+T1505.006,vSphere Installation Bundles,attack-pattern--f8ba7d61-11c5-4130-bafd-7c3ff5fbf4b5,True,DC0064;DC0061;DC0038,Command Execution;File Modification;Application Log Content,DET0535,3
+T1518,Software Discovery,attack-pattern--e3b6daca-e963-4a69-aee6-ed4fd653ad58,False,DC0032;DC0064;DC0083;DC0038,Process Creation;Command Execution;Cloud Service Enumeration;Application Log Content,DET0392,4
+T1518.001,Security Software Discovery,attack-pattern--cba37adb-d6fb-4610-b069-dd04c0643384,True,DC0032;DC0064;DC0016,Process Creation;Command Execution;Module Load,DET0016,3
+T1518.002,Backup Software Discovery,attack-pattern--4a6cfdae-1417-40c7-a84e-f59d21c58266,True,DC0055;DC0039;DC0032;DC0063,File Access;File Creation;Process Creation;Windows Registry Key Modification,DET0088,4
+T1525,Implant Internal Image,attack-pattern--4fd8a28b-4b3a-4cd6-a8cf-85ba5f824a7f,False,DC0036;DC0015;DC0080,Image Modification;Image Creation;Instance Start,DET0334,3
+T1526,Cloud Service Discovery,attack-pattern--e24fcba8-2557-4442-a139-1ee2f2e784db,False,DC0083;DC0067;DC0013,Cloud Service Enumeration;Logon Session Creation;User Account Metadata,DET0402,3
+T1528,Steal Application Access Token,attack-pattern--890c9858-598c-401d-a4d5-c67ebcdd703a,False,DC0055;DC0025;DC0083;DC0038;DC0002;DC0069,File Access;Cloud Storage Access;Cloud Service Enumeration;Application Log Content;User Account Authentication;Cloud Service Modification,DET0515,6
+T1529,System Shutdown/Reboot,attack-pattern--ff73aa03-0090-4464-83ac-f89e233c02bc,False,DC0032;DC0064;DC0018,Process Creation;Command Execution;Host Status,DET0559,3
+T1530,Data from Cloud Storage,attack-pattern--3298ce88-1628-43b1-87d9-0b5336b193d7,False,DC0085;DC0025;DC0002;DC0013,Network Traffic Content;Cloud Storage Access;User Account Authentication;User Account Metadata,DET0484,4
+T1531,Account Access Removal,attack-pattern--b24e2a20-3b3d-4bf0-823b-1ed765398fb0,False,DC0032;DC0064;DC0002;DC0010;DC0009,Process Creation;Command Execution;User Account Authentication;User Account Modification;User Account Deletion,DET0120,5
+T1534,Internal Spearphishing,attack-pattern--9e7452df-5144-4b6e-b04a-b66dd4016747,False,DC0085;DC0088;DC0032;DC0064;DC0038;DC0067;DC0002,Network Traffic Content;Logon Session Metadata;Process Creation;Command Execution;Application Log Content;Logon Session Creation;User Account Authentication,DET0054,7
+T1535,Unused/Unsupported Cloud Regions,attack-pattern--59bd0dec-f8b2-4b9a-9141-37a1e6899761,False,DC0082;DC0024;DC0013;DC0080,Network Connection Creation;Cloud Storage Creation;User Account Metadata;Instance Start,DET0247,4
+T1537,Transfer Data to Cloud Account,attack-pattern--d4bdbdea-eaec-4071-b4f9-5105e12ea4b6,False,DC0085;DC0057;DC0023;DC0062;DC0038;DC0027;DC0058,Network Traffic Content;Snapshot Creation;Cloud Storage Modification;Snapshot Metadata;Application Log Content;Cloud Storage Metadata;Snapshot Modification,DET0573,7
+T1538,Cloud Service Dashboard,attack-pattern--e49920b0-6c54-40c1-9571-73723653205f,False,DC0038;DC0067;DC0002;DC0027,Application Log Content;Logon Session Creation;User Account Authentication;Cloud Storage Metadata,DET0291,4
+T1539,Steal Web Session Cookie,attack-pattern--10ffac09-e42d-4f56-ab20-db94c67d76ff,False,DC0035;DC0055;DC0032;DC0061;DC0038;DC0067;DC0002,Process Access;File Access;Process Creation;File Modification;Application Log Content;Logon Session Creation;User Account Authentication,DET0509,7
+T1542,Pre-OS Boot,attack-pattern--7f0ca133-88c4-40c6-a62f-b3083a7fbc2e,False,DC0039;DC0032;DC0046;DC0064;DC0054;DC0061;DC0004,File Creation;Process Creation;Drive Modification;Command Execution;Drive Access;File Modification;Firmware Modification,DET0278,7
+T1542.001,System Firmware,attack-pattern--16ab6452-c3c1-497c-a47d-206018ca1ada,True,DC0039;DC0032;DC0046;DC0054;DC0004,File Creation;Process Creation;Drive Modification;Drive Access;Firmware Modification,DET0099,5
+T1542.002,Component Firmware,attack-pattern--791481f8-e96a-41be-b089-a088763083d4,True,DC0079;DC0004,Driver Load;Firmware Modification,DET0323,2
+T1542.003,Bootkit,attack-pattern--1b7b1806-7746-41a1-a35d-e48dae25ddba,True,DC0039;DC0046;DC0054;DC0061,File Creation;Drive Modification;Drive Access;File Modification,DET0150,4
+T1542.004,ROMMONkit,attack-pattern--a6557c75-798f-42e4-be70-ab4502e0a3bc,True,DC0082;DC0021;DC0004,Network Connection Creation;OS API Execution;Firmware Modification,DET0175,3
+T1542.005,TFTP Boot,attack-pattern--28abec6c-4443-4b03-8206-07f2e264a6b4,True,DC0082;DC0064;DC0004,Network Connection Creation;Command Execution;Firmware Modification,DET0582,3
+T1543,Create or Modify System Process,attack-pattern--106c0cf6-bf73-4601-9aa8-0945c2715ec5,False,DC0032;DC0060;DC0064;DC0061;DC0072;DC0063,Process Creation;Service Creation;Command Execution;File Modification;Container Creation;Windows Registry Key Modification,DET0571,6
+T1543.001,Launch Agent,attack-pattern--d10cbd34-42e3-45c0-84d2-535a09849584,True,DC0039;DC0060;DC0064;DC0061,File Creation;Service Creation;Command Execution;File Modification,DET0434,4
+T1543.002,Systemd Service,attack-pattern--dfefe2ed-4389-4318-8762-f0272b350a1b,True,DC0039;DC0032;DC0060;DC0064;DC0061,File Creation;Process Creation;Service Creation;Command Execution;File Modification,DET0253,5
+T1543.003,Windows Service,attack-pattern--2959d63f-73fd-46a1-abd2-109d7dcede32,True,DC0079;DC0032;DC0060;DC0063,Driver Load;Process Creation;Service Creation;Windows Registry Key Modification,DET0552,4
+T1543.004,Launch Daemon,attack-pattern--573ad264-1371-4ae0-8482-d2673b719dba,True,DC0039;DC0032;DC0060;DC0061,File Creation;Process Creation;Service Creation;File Modification,DET0401,4
+T1543.005,Container Service,attack-pattern--b0e54bf7-835e-4f44-bd8e-62f431b9b76a,True,DC0032;DC0019;DC0060;DC0072,Process Creation;Pod Creation;Service Creation;Container Creation,DET0473,4
+T1546,Event Triggered Execution,attack-pattern--b6301b64-ef57-4cce-bb0b-77026f14a8db,False,DC0008;DC0085;DC0032;DC0059;DC0064;DC0061;DC0029;DC0063;DC0069;DC0001,WMI Creation;Network Traffic Content;Process Creation;File Metadata;Command Execution;File Modification;Script Execution;Windows Registry Key Modification;Cloud Service Modification;Scheduled Job Creation,DET0010,10
+T1546.001,Change Default File Association,attack-pattern--98034fef-d9fb-4667-8dc4-2eab6231724c,True,DC0088;DC0032;DC0063,Logon Session Metadata;Process Creation;Windows Registry Key Modification,DET0061,3
+T1546.002,Screensaver,attack-pattern--ce4b7013-640e-48a9-b501-d0025a95f4bf,True,DC0032;DC0063,Process Creation;Windows Registry Key Modification,DET0154,2
+T1546.003,Windows Management Instrumentation Event Subscription,attack-pattern--910906dd-8c0a-475a-9cc1-5e029e2fad58,True,DC0008;DC0032;DC0016,WMI Creation;Process Creation;Module Load,DET0086,3
+T1546.004,Unix Shell Configuration Modification,attack-pattern--b63a34e8-0a61-4c97-a23b-bf8a2ed812e2,True,DC0085;DC0032;DC0061,Network Traffic Content;Process Creation;File Modification,DET0020,3
+T1546.005,Trap,attack-pattern--63220765-d418-44de-8fae-694b3912317d,True,DC0055;DC0032;DC0061,File Access;Process Creation;File Modification,DET0369,3
+T1546.006,LC_LOAD_DYLIB Addition,attack-pattern--10ff21b9-5a01-4268-a1b5-3b55015f1847,True,DC0059;DC0061;DC0016,File Metadata;File Modification;Module Load,DET0216,3
+T1546.007,Netsh Helper DLL,attack-pattern--f63fe421-b1d1-45c0-b8a7-02cd16ff2bed,True,DC0032;DC0016;DC0063,Process Creation;Module Load;Windows Registry Key Modification,DET0575,3
+T1546.008,Accessibility Features,attack-pattern--70e52b04-2a0c-4cea-9d18-7149f1df9dc5,True,DC0039;DC0032;DC0059;DC0063,File Creation;Process Creation;File Metadata;Windows Registry Key Modification,DET0033,4
+T1546.009,AppCert DLLs,attack-pattern--7d57b371-10c2-45e5-b3cc-83a8fb380e4c,True,DC0032;DC0016;DC0063,Process Creation;Module Load;Windows Registry Key Modification,DET0362,3
+T1546.010,AppInit DLLs,attack-pattern--cc89ecbd-3d33-4a41-bcca-001e702d18fd,True,DC0032;DC0016;DC0063,Process Creation;Module Load;Windows Registry Key Modification,DET0557,3
+T1546.011,Application Shimming,attack-pattern--42fe883a-21ea-4cfb-b94a-78b6476dcc83,True,DC0039;DC0032;DC0016;DC0063,File Creation;Process Creation;Module Load;Windows Registry Key Modification,DET0017,4
+T1546.012,Image File Execution Options Injection,attack-pattern--6d4a7fb3-5a24-42be-ae61-6728a2b581f6,True,DC0035;DC0032;DC0056;DC0063,Process Access;Process Creation;Windows Registry Key Creation;Windows Registry Key Modification,DET0422,4
+T1546.013,PowerShell Profile,attack-pattern--0f2c410d-d740-4ed9-abb1-b8f4a7faf6c3,True,DC0039;DC0032;DC0064;DC0061,File Creation;Process Creation;Command Execution;File Modification,DET0451,4
+T1546.014,Emond,attack-pattern--9c45eaa3-8604-4780-8988-b5074dbb9ecd,True,DC0039;DC0032;DC0064;DC0061,File Creation;Process Creation;Command Execution;File Modification,DET0555,4
+T1546.015,Component Object Model Hijacking,attack-pattern--bc0f5e80-91c0-4e04-9fbb-e4e332c85dae,True,DC0032;DC0016;DC0063,Process Creation;Module Load;Windows Registry Key Modification,DET0481,3
+T1546.016,Installer Packages,attack-pattern--da051493-ae9c-4b1b-9760-c009c46c9b56,True,DC0039;DC0032,File Creation;Process Creation,DET0330,2
+T1546.017,Udev Rules,attack-pattern--f4c3f644-ab33-433d-8648-75cc03a95792,True,DC0032;DC0064;DC0061,Process Creation;Command Execution;File Modification,DET0375,3
+T1546.018,Python Startup Hooks,attack-pattern--c5087385-9b7c-4488-9923-d9e370bf08df,True,DC0085;DC0032;DC0059;DC0061,Network Traffic Content;Process Creation;File Metadata;File Modification,DET0258,4
+T1547,Boot or Logon Autostart Execution,attack-pattern--1ecb2399-e8ba-4f6b-8ba7-5c27d49405cf,False,DC0039;DC0032;DC0041;DC0061;DC0063,File Creation;Process Creation;Service Metadata;File Modification;Windows Registry Key Modification,DET0274,5
+T1547.001,Registry Run Keys / Startup Folder,attack-pattern--9efb1ea7-c37b-4595-9640-b7680cd84279,True,DC0039;DC0032;DC0063,File Creation;Process Creation;Windows Registry Key Modification,DET0365,3
+T1547.002,Authentication Package,attack-pattern--b8cfed42-6a8a-4989-ad72-541af74475ec,True,DC0016;DC0063,Module Load;Windows Registry Key Modification,DET0207,2
+T1547.003,Time Providers,attack-pattern--61afc315-860c-4364-825d-0d62b2e91edc,True,DC0039;DC0032;DC0016;DC0063,File Creation;Process Creation;Module Load;Windows Registry Key Modification,DET0122,4
+T1547.004,Winlogon Helper DLL,attack-pattern--6836813e-8ec8-4375-b459-abb388cb1a35,True,DC0032;DC0016;DC0063;DC0050,Process Creation;Module Load;Windows Registry Key Modification;Windows Registry Key Access,DET0404,4
+T1547.005,Security Support Provider,attack-pattern--5095a853-299c-4876-abd7-ac0050fb5462,True,DC0032;DC0016;DC0063,Process Creation;Module Load;Windows Registry Key Modification,DET0542,3
+T1547.006,Kernel Modules and Extensions,attack-pattern--a1b52199-c8c5-438a-9ded-656f1d0888c6,True,DC0031;DC0039;DC0032;DC0064;DC0061,Kernel Module Load;File Creation;Process Creation;Command Execution;File Modification,DET0450,5
+T1547.007,Re-opened Applications,attack-pattern--e5cc9e7a-e61a-46a1-b869-55fb6eab058e,True,DC0088;DC0032;DC0059;DC0061,Logon Session Metadata;Process Creation;File Metadata;File Modification,DET0125,4
+T1547.008,LSASS Driver,attack-pattern--f0589bc3-a6ae-425a-a3d5-5659bfee07f4,True,DC0039;DC0079;DC0056;DC0061;DC0016;DC0063,File Creation;Driver Load;Windows Registry Key Creation;File Modification;Module Load;Windows Registry Key Modification,DET0225,6
+T1547.009,Shortcut Modification,attack-pattern--4ab929c6-ee2d-4fb5-aab4-b14be2ed7179,True,DC0039;DC0032;DC0059;DC0061,File Creation;Process Creation;File Metadata;File Modification,DET0180,4
+T1547.010,Port Monitors,attack-pattern--43881e51-ac74-445b-b4c6-f9f9e9bf23fe,True,DC0039;DC0032;DC0021;DC0016;DC0063,File Creation;Process Creation;OS API Execution;Module Load;Windows Registry Key Modification,DET0204,5
+T1547.012,Print Processors,attack-pattern--2de47683-f398-448f-b947-9abcc3e32fad,True,DC0035;DC0039;DC0016;DC0063,Process Access;File Creation;Module Load;Windows Registry Key Modification,DET0026,4
+T1547.013,XDG Autostart Entries,attack-pattern--e0232cb0-ded5-4c2e-9dc7-2893142a5c11,True,DC0055;DC0039;DC0032;DC0059;DC0067,File Access;File Creation;Process Creation;File Metadata;Logon Session Creation,DET0390,5
+T1547.014,Active Setup,attack-pattern--22522668-ddf6-470b-a027-9d6866679f67,True,DC0088;DC0032;DC0056;DC0063,Logon Session Metadata;Process Creation;Windows Registry Key Creation;Windows Registry Key Modification,DET0312,4
+T1547.015,Login Items,attack-pattern--84601337-6a55-4ad7-9c35-79e0d1ea2ab3,True,DC0032;DC0061;DC0021;DC0029,Process Creation;File Modification;OS API Execution;Script Execution,DET0121,4
+T1548,Abuse Elevation Control Mechanism,attack-pattern--67720091-eee3-4d2d-ae16-8264567f6f5b,False,DC0088;DC0032;DC0059;DC0021;DC0010;DC0063;DC0034,Logon Session Metadata;Process Creation;File Metadata;OS API Execution;User Account Modification;Windows Registry Key Modification;Process Metadata,DET0345,7
+T1548.001,Setuid and Setgid,attack-pattern--6831414d-bb70-42b7-8030-d4e06b2660c9,True,DC0032;DC0064;DC0034,Process Creation;Command Execution;Process Metadata,DET0110,3
+T1548.002,Bypass User Account Control,attack-pattern--120d5519-3098-4e1c-9191-2aa61232f073,True,DC0035;DC0088;DC0032;DC0016;DC0063,Process Access;Logon Session Metadata;Process Creation;Module Load;Windows Registry Key Modification,DET0388,5
+T1548.003,Sudo and Sudo Caching,attack-pattern--1365fe3b-0f50-455d-b4da-266ce31c23b0,True,DC0033;DC0064;DC0061;DC0034,Process Termination;Command Execution;File Modification;Process Metadata,DET0052,4
+T1548.004,Elevated Execution with Prompt,attack-pattern--b84903f0-c7d5-435d-a69e-de47cc3578c0,True,DC0032;DC0021;DC0002,Process Creation;OS API Execution;User Account Authentication,DET0395,3
+T1548.005,Temporary Elevated Cloud Access,attack-pattern--6fa224c7-5091-4595-bf15-3fc9fe2f2c7c,True,DC0038;DC0002;DC0013,Application Log Content;User Account Authentication;User Account Metadata,DET0393,3
+T1548.006,TCC Manipulation,attack-pattern--e8a0a025-3601-4755-abfb-8d08283329fb,True,DC0032;DC0064;DC0061;DC0018,Process Creation;Command Execution;File Modification;Host Status,DET0534,4
+T1550,Use Alternate Authentication Material,attack-pattern--51a14c76-dd3b-440b-9c20-2bf91d25a814,False,DC0032;DC0038;DC0067;DC0002;DC0013;DC0007,Process Creation;Application Log Content;Logon Session Creation;User Account Authentication;User Account Metadata;Web Credential Usage,DET0338,6
+T1550.001,Application Access Token,attack-pattern--f005e783-57d4-4837-88ad-dbe7faee1c51,True,DC0002;DC0007,User Account Authentication;Web Credential Usage,DET0185,2
+T1550.002,Pass the Hash,attack-pattern--e624264c-033a-424d-9fd7-fc9c3bbdb03e,True,DC0084;DC0082;DC0032;DC0067,Active Directory Credential Request;Network Connection Creation;Process Creation;Logon Session Creation,DET0409,4
+T1550.003,Pass the Ticket,attack-pattern--7b211ac6-c815-4189-93a9-ab415deca926,True,DC0084;DC0035;DC0067;DC0002;DC0016,Active Directory Credential Request;Process Access;Logon Session Creation;User Account Authentication;Module Load,DET0352,5
+T1550.004,Web Session Cookie,attack-pattern--c3c8c916-2f3c-4e71-94b2-240bdfc996f0,True,DC0067;DC0002;DC0007,Logon Session Creation;User Account Authentication;Web Credential Usage,DET0074,3
+T1552,Unsecured Credentials,attack-pattern--435dfb86-2697-4867-85b5-2fef496c0517,False,DC0055;DC0039;DC0085;DC0032;DC0064;DC0038;DC0002;DC0070;DC0063,File Access;File Creation;Network Traffic Content;Process Creation;Command Execution;Application Log Content;User Account Authentication;Cloud Service Metadata;Windows Registry Key Modification,DET0412,9
+T1552.001,Credentials In Files,attack-pattern--837f9164-50af-4ac0-8219-379d8a74cefc,True,DC0082;DC0055;DC0039;DC0032;DC0064;DC0067,Network Connection Creation;File Access;File Creation;Process Creation;Command Execution;Logon Session Creation,DET0307,6
+T1552.002,Credentials in Registry,attack-pattern--341e222a-a6e3-4f6f-b69c-831d792b1580,True,DC0032;DC0063;DC0050,Process Creation;Windows Registry Key Modification;Windows Registry Key Access,DET0250,3
+T1552.003,Shell History,attack-pattern--8187bd2a-866f-4457-9009-86b0ddedffa3,True,DC0055;DC0039;DC0032;DC0034,File Access;File Creation;Process Creation;Process Metadata,DET0385,4
+T1552.004,Private Keys,attack-pattern--60b508a1-6a5e-46b1-821a-9f7b78752abf,True,DC0055;DC0039;DC0032;DC0064;DC0102,File Access;File Creation;Process Creation;Command Execution;Network Share Access,DET0549,5
+T1552.005,Cloud Instance Metadata API,attack-pattern--19bf235b-8620-4997-b5b4-94e0659ed7c3,True,DC0082;DC0085;DC0070,Network Connection Creation;Network Traffic Content;Cloud Service Metadata,DET0001,3
+T1552.006,Group Policy Preferences,attack-pattern--8d7bd4f5-3a89-4453-9c82-2c8894d5655e,True,DC0039;DC0032;DC0029;DC0102,File Creation;Process Creation;Script Execution;Network Share Access,DET0381,4
+T1552.007,Container API,attack-pattern--f8ef3a62-3f44-40a4-abca-761ab235c436,True,DC0032;DC0064;DC0038;DC0002,Process Creation;Command Execution;Application Log Content;User Account Authentication,DET0198,4
+T1552.008,Chat Messages,attack-pattern--9664ad0e-789e-40ac-82e2-d7b17fbe8fb3,True,DC0038;DC0002,Application Log Content;User Account Authentication,DET0111,2
+T1553,Subvert Trust Controls,attack-pattern--b83e166d-13d7-4b52-8677-dff90c548fd7,False,DC0039;DC0032;DC0059;DC0064;DC0063,File Creation;Process Creation;File Metadata;Command Execution;Windows Registry Key Modification,DET0452,5
+T1553.001,Gatekeeper Bypass,attack-pattern--31a0a2ac-c67c-4a7e-b9ed-6a96477d4e8e,True,DC0032;DC0059;DC0061,Process Creation;File Metadata;File Modification,DET0288,3
+T1553.002,Code Signing,attack-pattern--32901740-b42c-4fdd-bc02-345b5dc57082,True,DC0032;DC0059;DC0016,Process Creation;File Metadata;Module Load,DET0230,3
+T1553.003,SIP and Trust Provider Hijacking,attack-pattern--543fceb5-cb92-40cb-aacf-6913d4db58bc,True,DC0061;DC0016;DC0063,File Modification;Module Load;Windows Registry Key Modification,DET0442,3
+T1553.004,Install Root Certificate,attack-pattern--c615231b-f253-4f58-9d47-d5b4cbdb6839,True,DC0032;DC0064;DC0056;DC0061;DC0063,Process Creation;Command Execution;Windows Registry Key Creation;File Modification;Windows Registry Key Modification,DET0056,5
+T1553.005,Mark-of-the-Web Bypass,attack-pattern--7e7c2fba-7cca-486c-9582-4c1bb2851961,True,DC0055;DC0039;DC0059,File Access;File Creation;File Metadata,DET0257,3
+T1553.006,Code Signing Policy Modification,attack-pattern--565275d5-fcc3-4b66-b4e7-928e4cac6b8c,True,DC0032;DC0064;DC0063,Process Creation;Command Execution;Windows Registry Key Modification,DET0523,3
+T1554,Compromise Host Software Binary,attack-pattern--960c3c86-1480-4d72-b4e0-8c242e84a5c5,False,DC0039;DC0032;DC0061;DC0016,File Creation;Process Creation;File Modification;Module Load,DET0336,4
+T1555,Credentials from Password Stores,attack-pattern--3fc9b85a-2862-4363-a64d-d692e3ffbee0,False,DC0035;DC0055;DC0032;DC0083;DC0021,Process Access;File Access;Process Creation;Cloud Service Enumeration;OS API Execution,DET0430,5
+T1555.001,Keychain,attack-pattern--1eaebf46-e361-4437-bc23-d5d65a3b92e3,True,DC0055;DC0032;DC0021,File Access;Process Creation;OS API Execution,DET0396,3
+T1555.002,Securityd Memory,attack-pattern--1a80d097-54df-41d8-9d33-34e755ec5e72,True,DC0035;DC0055;DC0032;DC0064,Process Access;File Access;Process Creation;Command Execution,DET0057,4
+T1555.003,Credentials from Web Browsers,attack-pattern--58a3e6aa-4453-4cc8-a51f-4befe80b31a8,True,DC0035;DC0055;DC0032,Process Access;File Access;Process Creation,DET0037,3
+T1555.004,Windows Credential Manager,attack-pattern--d336b553-5da9-46ca-98a8-0b23f49fb447,True,DC0035;DC0032;DC0059,Process Access;Process Creation;File Metadata,DET0134,3
+T1555.005,Password Managers,attack-pattern--315f51f0-6b03-4c1e-bfb2-84740afb8e21,True,DC0035;DC0055;DC0032;DC0059,Process Access;File Access;Process Creation;File Metadata,DET0597,4
+T1555.006,Cloud Secrets Management Stores,attack-pattern--cfb525cc-5494-401d-a82b-2539ca46a561,True,DC0083,Cloud Service Enumeration,DET0130,1
+T1556,Modify Authentication Process,attack-pattern--f4c1826f-a322-41cd-9557-562100848c84,False,DC0035;DC0032;DC0061;DC0016;DC0010;DC0063;DC0069,Process Access;Process Creation;File Modification;Module Load;User Account Modification;Windows Registry Key Modification;Cloud Service Modification,DET0104,7
+T1556.001,Domain Controller Authentication,attack-pattern--d4b96d2c-1032-4b22-9235-2b5b649d0605,True,DC0035;DC0061;DC0067;DC0016,Process Access;File Modification;Logon Session Creation;Module Load,DET0271,4
+T1556.002,Password Filter DLL,attack-pattern--3731fbcd-0e43-47ae-ae6c-d15e510f0d42,True,DC0039;DC0016;DC0063,File Creation;Module Load;Windows Registry Key Modification,DET0472,3
+T1556.003,Pluggable Authentication Modules,attack-pattern--06c00069-771a-4d57-8ef5-d3718c1a8771,True,DC0032;DC0061;DC0067,Process Creation;File Modification;Logon Session Creation,DET0454,3
+T1556.004,Network Device Authentication,attack-pattern--fa44a152-ac48-441e-a524-dd7b04b8adcd,True,DC0061;DC0002,File Modification;User Account Authentication,DET0272,2
+T1556.005,Reversible Encryption,attack-pattern--d50955c2-272d-4ac8-95da-10c29dda1c48,True,DC0032;DC0066;DC0064,Process Creation;Active Directory Object Modification;Command Execution,DET0589,3
+T1556.006,Multi-Factor Authentication,attack-pattern--b4409cd8-0da9-46e1-a401-a241afd4d1cc,True,DC0066;DC0061;DC0038;DC0029;DC0002;DC0010;DC0069,Active Directory Object Modification;File Modification;Application Log Content;Script Execution;User Account Authentication;User Account Modification;Cloud Service Modification,DET0190,7
+T1556.007,Hybrid Identity,attack-pattern--54ca26f3-c172-4231-93e5-ccebcac2161f,True,DC0066;DC0038;DC0067;DC0016;DC0010;DC0069,Active Directory Object Modification;Application Log Content;Logon Session Creation;Module Load;User Account Modification;Cloud Service Modification,DET0293,6
+T1556.008,Network Provider DLL,attack-pattern--90c4a591-d02d-490b-92aa-619d9701ac04,True,DC0035;DC0039;DC0016;DC0063,Process Access;File Creation;Module Load;Windows Registry Key Modification,DET0580,4
+T1556.009,Conditional Access Policies,attack-pattern--ceaeb6d8-95ee-4da2-9d42-dc6aa6ca43ae,True,DC0066;DC0038;DC0069,Active Directory Object Modification;Application Log Content;Cloud Service Modification,DET0030,3
+T1557,Adversary-in-the-Middle,attack-pattern--035bb001-ab69-4a0b-9f6c-2de8b09e1b9d,False,DC0082;DC0085;DC0061;DC0038;DC0078;DC0063,Network Connection Creation;Network Traffic Content;File Modification;Application Log Content;Network Traffic Flow;Windows Registry Key Modification,DET0296,6
+T1557.001,LLMNR/NBT-NS Poisoning and SMB Relay,attack-pattern--650c784b-7504-4df7-ab2c-4ea882384d1e,True,DC0085;DC0060;DC0078;DC0063,Network Traffic Content;Service Creation;Network Traffic Flow;Windows Registry Key Modification,DET0462,4
+T1557.002,ARP Cache Poisoning,attack-pattern--cabe189c-a0e3-4965-a473-dcff00f17213,True,DC0082;DC0085;DC0078,Network Connection Creation;Network Traffic Content;Network Traffic Flow,DET0387,3
+T1557.003,DHCP Spoofing,attack-pattern--59ff91cd-1430-4075-8563-e6f15f4f9ff5,True,DC0085;DC0038;DC0078,Network Traffic Content;Application Log Content;Network Traffic Flow,DET0468,3
+T1557.004,Evil Twin,attack-pattern--48b836c6-e4ca-435a-82a3-29c03e5b492e,True,DC0085;DC0038;DC0078,Network Traffic Content;Application Log Content;Network Traffic Flow,DET0379,3
+T1558,Steal or Forge Kerberos Tickets,attack-pattern--3fc01293-ef5e-41c6-86ce-61f10706b64a,False,DC0084;DC0035;DC0055;DC0088,Active Directory Credential Request;Process Access;File Access;Logon Session Metadata,DET0522,4
+T1558.001,Golden Ticket,attack-pattern--768dce68-8d0d-477a-b01d-0eea98b963a1,True,DC0084;DC0035;DC0088,Active Directory Credential Request;Process Access;Logon Session Metadata,DET0144,3
+T1558.002,Silver Ticket,attack-pattern--d273434a-448e-4598-8e14-607f4a0d5e27,True,DC0084;DC0035;DC0088,Active Directory Credential Request;Process Access;Logon Session Metadata,DET0241,3
+T1558.003,Kerberoasting,attack-pattern--f2877f7f-9a4c-4251-879f-1224e3006bee,True,DC0084;DC0035;DC0088;DC0067,Active Directory Credential Request;Process Access;Logon Session Metadata;Logon Session Creation,DET0157,4
+T1558.004,AS-REP Roasting,attack-pattern--3986e7fd-a8e9-4ecb-bfc6-55920855912b,True,DC0084;DC0032,Active Directory Credential Request;Process Creation,DET0113,2
+T1558.005,Ccache Files,attack-pattern--394220d9-8efc-4252-9040-664f7b115be6,True,DC0055;DC0032,File Access;Process Creation,DET0024,2
+T1559,Inter-Process Communication,attack-pattern--acd0ba37-7ba9-4cc5-ac61-796586cd856d,False,DC0035;DC0055;DC0032;DC0029;DC0048,Process Access;File Access;Process Creation;Script Execution;Named Pipe Metadata,DET0493,5
+T1559.001,Component Object Model,attack-pattern--2f6b4ed7-fef1-44ba-bcb8-1b4beb610b64,True,DC0032;DC0016;DC0050,Process Creation;Module Load;Windows Registry Key Access,DET0224,3
+T1559.002,Dynamic Data Exchange,attack-pattern--232a7e42-cd6e-4902-8fe9-2960f529dd4d,True,DC0032;DC0016;DC0050,Process Creation;Module Load;Windows Registry Key Access,DET0504,3
+T1559.003,XPC Services,attack-pattern--8252f135-ed26-4ce1-ae61-f26e94429a19,True,DC0035;DC0032;DC0048,Process Access;Process Creation;Named Pipe Metadata,DET0335,3
+T1560,Archive Collected Data,attack-pattern--53ac20cd-aca3-406e-9aa0-9fc7fdc60a5a,False,DC0039;DC0032;DC0064;DC0016,File Creation;Process Creation;Command Execution;Module Load,DET0526,4
+T1560.001,Archive via Utility,attack-pattern--00f90846-cbd1-4fc5-9233-df5c2bf2a662,True,DC0039;DC0032;DC0064;DC0016,File Creation;Process Creation;Command Execution;Module Load,DET0298,4
+T1560.002,Archive via Library,attack-pattern--41868330-6ee2-4d0f-b743-9f2294c3c9b6,True,DC0039;DC0032;DC0064;DC0016,File Creation;Process Creation;Command Execution;Module Load,DET0268,4
+T1560.003,Archive via Custom Method,attack-pattern--143c0cbb-a297-4142-9624-87ffc778980b,True,DC0035;DC0039;DC0032;DC0064;DC0020,Process Access;File Creation;Process Creation;Command Execution;Process Modification,DET0438,5
+T1561,Disk Wipe,attack-pattern--1988cc35-ced8-4dad-b2d1-7628488fa967,False,DC0079;DC0032;DC0046;DC0064;DC0054;DC0002;DC0013,Driver Load;Process Creation;Drive Modification;Command Execution;Drive Access;User Account Authentication;User Account Metadata,DET0137,7
+T1561.001,Disk Content Wipe,attack-pattern--fb640c43-aa6b-431e-a961-a279010424ac,True,DC0079;DC0032;DC0046;DC0064;DC0054;DC0002;DC0013,Driver Load;Process Creation;Drive Modification;Command Execution;Drive Access;User Account Authentication;User Account Metadata,DET0316,7
+T1561.002,Disk Structure Wipe,attack-pattern--0af0ca99-357d-4ba1-805f-674fdfb7bef9,True,DC0079;DC0032;DC0046;DC0064;DC0054;DC0002;DC0013,Driver Load;Process Creation;Drive Modification;Command Execution;Drive Access;User Account Authentication;User Account Metadata,DET0297,7
+T1562,Impair Defenses,attack-pattern--3d333250-30e4-4a82-9edc-756c68afc529,False,DC0032;DC0060;DC0033;DC0064;DC0041;DC0056;DC0043;DC0010;DC0051;DC0063;DC0090,Process Creation;Service Creation;Process Termination;Command Execution;Service Metadata;Windows Registry Key Creation;Firewall Disable;User Account Modification;Firewall Rule Modification;Windows Registry Key Modification;Cloud Service Disable,DET0317,11
+T1562.001,Disable or Modify Tools,attack-pattern--ac08589e-ee59-4935-8667-d845e38fe579,True,DC0032;DC0060;DC0033;DC0041;DC0063;DC0069,Process Creation;Service Creation;Process Termination;Service Metadata;Windows Registry Key Modification;Cloud Service Modification,DET0497,6
+T1562.002,Disable Windows Event Logging,attack-pattern--4eb28bed-d11a-4641-9863-c2ac017d910a,True,DC0032;DC0041;DC0038;DC0063,Process Creation;Service Metadata;Application Log Content;Windows Registry Key Modification,DET0187,4
+T1562.003,Impair Command History Logging,attack-pattern--8f504411-cb96-4dac-a537-8d2bb7679c59,True,DC0032;DC0064,Process Creation;Command Execution,DET0563,2
+T1562.004,Disable or Modify System Firewall,attack-pattern--5372c5fe-f424-4def-bcd5-d3a8e770f07b,True,DC0032;DC0064;DC0051;DC0063,Process Creation;Command Execution;Firewall Rule Modification;Windows Registry Key Modification,DET0145,4
+T1562.006,Indicator Blocking,attack-pattern--74d2a63f-3c7b-4852-92da-02d8fbab16da,True,DC0033;DC0064;DC0018;DC0063,Process Termination;Command Execution;Host Status;Windows Registry Key Modification,DET0239,4
+T1562.007,Disable or Modify Cloud Firewall,attack-pattern--77532a55-c283-4cd2-bc5d-2d0b65e9d88c,True,DC0043;DC0051,Firewall Disable;Firewall Rule Modification,DET0424,2
+T1562.008,Disable or Modify Cloud Logs,attack-pattern--cacc40da-4c9e-462c-80d5-fd70a178b12d,True,DC0010;DC0069;DC0090,User Account Modification;Cloud Service Modification;Cloud Service Disable,DET0289,3
+T1562.009,Safe Mode Boot,attack-pattern--28170e17-8384-415c-8486-2e6b294cb803,True,DC0032;DC0056;DC0063,Process Creation;Windows Registry Key Creation;Windows Registry Key Modification,DET0116,3
+T1562.010,Downgrade Attack,attack-pattern--824add00-99a1-4b15-9a2d-6c5683b7b497,True,DC0032;DC0064;DC0063;DC0034,Process Creation;Command Execution;Windows Registry Key Modification;Process Metadata,DET0350,4
+T1562.011,Spoof Security Alerting,attack-pattern--bef8aaee-961d-4359-a308-4c2182bcedff,True,DC0032;DC0060;DC0018,Process Creation;Service Creation;Host Status,DET0311,3
+T1562.012,Disable or Modify Linux Audit System,attack-pattern--562e9b64-7239-493d-80f4-2bff900d9054,True,DC0064;DC0041;DC0061;DC0020,Command Execution;Service Metadata;File Modification;Process Modification,DET0062,4
+T1562.013,Disable or Modify Network Device Firewall,attack-pattern--a0f84e1d-d25c-4dd1-bb26-3c0e68471530,True,DC0082;DC0064;DC0067;DC0051,Network Connection Creation;Command Execution;Logon Session Creation;Firewall Rule Modification,DET0306,4
+T1563,Remote Service Session Hijacking,attack-pattern--5b0ad6f8-6a16-4966-a4ef-d09ea6e2a9f5,False,DC0082;DC0085;DC0032;DC0064;DC0067;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Command Execution;Logon Session Creation;Network Traffic Flow,DET0079,6
+T1563.001,SSH Hijacking,attack-pattern--4d2a5b3e-340d-4600-9123-309dd63c9bf8,True,DC0082;DC0032;DC0067;DC0034,Network Connection Creation;Process Creation;Logon Session Creation;Process Metadata,DET0256,4
+T1563.002,RDP Hijacking,attack-pattern--e0033c16-a07e-48aa-8204-7c3ca669998c,True,DC0082;DC0032;DC0060;DC0067,Network Connection Creation;Process Creation;Service Creation;Logon Session Creation,DET0588,4
+T1564,Hide Artifacts,attack-pattern--22905430-4901-4c2a-84f6-98243cb173f8,False,DC0039;DC0032;DC0059;DC0064;DC0038;DC0063,File Creation;Process Creation;File Metadata;Command Execution;Application Log Content;Windows Registry Key Modification,DET0502,6
+T1564.001,Hidden Files and Directories,attack-pattern--ec8fc7e2-b356-455c-8db5-2e37be158e7d,True,DC0039;DC0032;DC0059;DC0064,File Creation;Process Creation;File Metadata;Command Execution,DET0032,4
+T1564.002,Hidden Users,attack-pattern--8c4aef43-48d5-49aa-b2af-c0cd58d30c3d,True,DC0064;DC0061;DC0013;DC0063;DC0014,Command Execution;File Modification;User Account Metadata;Windows Registry Key Modification;User Account Creation,DET0353,5
+T1564.003,Hidden Window,attack-pattern--cbb66055-0325-4111-aca0-40547b6ad5b0,True,DC0032;DC0064;DC0061;DC0063;DC0034,Process Creation;Command Execution;File Modification;Windows Registry Key Modification;Process Metadata,DET0128,5
+T1564.004,NTFS File Attributes,attack-pattern--f2857333-11d4-45bf-b064-2c28d8525be5,True,DC0039;DC0032;DC0059;DC0021,File Creation;Process Creation;File Metadata;OS API Execution,DET0432,4
+T1564.005,Hidden File System,attack-pattern--dfebc3b7-d19d-450b-81c7-6dafe4184c04,True,DC0032;DC0064;DC0061;DC0004;DC0063,Process Creation;Command Execution;File Modification;Firmware Modification;Windows Registry Key Modification,DET0461,5
+T1564.006,Run Virtual Instance,attack-pattern--b5327dd1-6bf9-4785-a199-25bcbd1f4a9d,True,DC0039;DC0032;DC0060;DC0064;DC0061;DC0028;DC0063,File Creation;Process Creation;Service Creation;Command Execution;File Modification;Image Metadata;Windows Registry Key Modification,DET0321,7
+T1564.007,VBA Stomping,attack-pattern--c898c4b5-bf36-4e6e-a4ad-5b8c4c13e35b,True,DC0039;DC0032;DC0059,File Creation;Process Creation;File Metadata,DET0012,3
+T1564.008,Email Hiding Rules,attack-pattern--0cf55441-b176-4332-89e7-2c4c7799d0ff,True,DC0032;DC0064;DC0061;DC0038,Process Creation;Command Execution;File Modification;Application Log Content,DET0192,4
+T1564.009,Resource Forking,attack-pattern--b22e5153-ac28-4cc6-865c-2054e36285cb,True,DC0032;DC0059;DC0064,Process Creation;File Metadata;Command Execution,DET0584,3
+T1564.010,Process Argument Spoofing,attack-pattern--ffe59ad3-ad9b-4b9f-b74f-5beb3c309dc1,True,DC0035;DC0032,Process Access;Process Creation,DET0045,2
+T1564.011,Ignore Process Interrupts,attack-pattern--4a2975db-414e-4c0c-bd92-775987514b4b,True,DC0032;DC0064,Process Creation;Command Execution,DET0067,2
+T1564.012,File/Path Exclusions,attack-pattern--09b008a9-b4eb-462a-a751-a0eb58050cd9,True,DC0055;DC0039;DC0032;DC0059,File Access;File Creation;Process Creation;File Metadata,DET0051,4
+T1564.013,Bind Mounts,attack-pattern--5bd41255-a224-4425-a2e2-e9d293eafe1c,True,DC0039;DC0021;DC0034,File Creation;OS API Execution;Process Metadata,DET0428,3
+T1564.014,Extended Attributes,attack-pattern--762e6f29-a62f-4d96-91ed-d0073181431f,True,DC0059;DC0064,File Metadata;Command Execution,DET0406,2
+T1565,Data Manipulation,attack-pattern--ac9e6b22-11bf-45d7-9181-c1cb08360931,False,DC0055;DC0039;DC0085;DC0059;DC0061;DC0021,File Access;File Creation;Network Traffic Content;File Metadata;File Modification;OS API Execution,DET0059,6
+T1565.001,Stored Data Manipulation,attack-pattern--1cfcb312-b8d7-47a4-b560-4b16cc677292,True,DC0039;DC0059;DC0061;DC0040,File Creation;File Metadata;File Modification;File Deletion,DET0193,4
+T1565.002,Transmitted Data Manipulation,attack-pattern--d0613359-5781-4fd2-b5be-c269270be1f6,True,DC0082;DC0085;DC0059;DC0021;DC0078,Network Connection Creation;Network Traffic Content;File Metadata;OS API Execution;Network Traffic Flow,DET0254,5
+T1565.003,Runtime Data Manipulation,attack-pattern--32ad5c86-2bcf-47d8-8fdc-d7f3d79a7490,True,DC0039;DC0059;DC0061;DC0021;DC0063,File Creation;File Metadata;File Modification;OS API Execution;Windows Registry Key Modification,DET0391,5
+T1566,Phishing,attack-pattern--a62a8db3-f23a-4d8f-afd6-9dbc77e7813b,False,DC0039;DC0032;DC0038;DC0067,File Creation;Process Creation;Application Log Content;Logon Session Creation,DET0070,4
+T1566.001,Spearphishing Attachment,attack-pattern--2e34237d-8574-43f6-aace-ae2915de8597,True,DC0082;DC0039;DC0032;DC0038;DC0078,Network Connection Creation;File Creation;Process Creation;Application Log Content;Network Traffic Flow,DET0236,5
+T1566.002,Spearphishing Link,attack-pattern--2b742742-28c3-4e1b-bab7-8350d6300fa7,True,DC0082;DC0085;DC0032;DC0038;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow,DET0107,5
+T1566.003,Spearphishing via Service,attack-pattern--f6ad61ee-65f3-4bd0-a3f5-2f0accb36317,True,DC0082;DC0039;DC0085;DC0032;DC0038;DC0078,Network Connection Creation;File Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow,DET0115,6
+T1566.004,Spearphishing Voice,attack-pattern--bb5e59c4-abe7-40c7-8196-e373cb1e5974,True,DC0038,Application Log Content,DET0245,1
+T1567,Exfiltration Over Web Service,attack-pattern--40597f16-0963-4249-bf4c-ac93b7fb9807,False,DC0082;DC0055;DC0039;DC0085;DC0032;DC0064;DC0038;DC0078,Network Connection Creation;File Access;File Creation;Network Traffic Content;Process Creation;Command Execution;Application Log Content;Network Traffic Flow,DET0548,8
+T1567.001,Exfiltration to Code Repository,attack-pattern--86a96bf6-cf8b-411c-aaeb-8959944d64f7,True,DC0082;DC0055;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0318,6
+T1567.002,Exfiltration to Cloud Storage,attack-pattern--bf1b6176-597c-4600-bfcd-ac989670f96b,True,DC0082;DC0055;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0570,6
+T1567.003,Exfiltration to Text Storage Sites,attack-pattern--ba04e672-da86-4e69-aa15-0eca5db25f43,True,DC0082;DC0055;DC0085;DC0032;DC0064;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Command Execution;Network Traffic Flow,DET0284,6
+T1567.004,Exfiltration Over Webhook,attack-pattern--43f2776f-b4bd-4118-94b8-fee47e69676d,True,DC0082;DC0055;DC0085;DC0032;DC0064;DC0038;DC0078,Network Connection Creation;File Access;Network Traffic Content;Process Creation;Command Execution;Application Log Content;Network Traffic Flow,DET0153,7
+T1568,Dynamic Resolution,attack-pattern--7bd9c723-2f78-4309-82c5-47cad406572b,False,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0039,4
+T1568.001,Fast Flux DNS,attack-pattern--29ba5a15-3b7b-4732-b817-65ea8f6468e6,True,DC0082;DC0032;DC0078,Network Connection Creation;Process Creation;Network Traffic Flow,DET0485,3
+T1568.002,Domain Generation Algorithms,attack-pattern--118f61a5-eb3e-4fb6-931f-2096647f4ecd,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0419,4
+T1568.003,DNS Calculation,attack-pattern--83a766f8-1501-4b3a-a2de-2e2849e8dfc1,True,DC0082;DC0085;DC0032;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Network Traffic Flow,DET0262,4
+T1569,System Services,attack-pattern--d157f9d2-d09a-4efa-bb2a-64963f94e253,False,DC0032;DC0060;DC0061;DC0063,Process Creation;Service Creation;File Modification;Windows Registry Key Modification,DET0279,4
+T1569.001,Launchctl,attack-pattern--810aa4ad-61c9-49cb-993f-daa06199421d,True,DC0032;DC0060;DC0064;DC0061,Process Creation;Service Creation;Command Execution;File Modification,DET0265,4
+T1569.002,Service Execution,attack-pattern--f1951e8a-500e-4a26-8803-76d95c4554b4,True,DC0082;DC0032;DC0060;DC0063,Network Connection Creation;Process Creation;Service Creation;Windows Registry Key Modification,DET0421,4
+T1569.003,Systemctl,attack-pattern--4b46767d-4a61-4f30-995e-c19a75c2e536,True,DC0032;DC0060;DC0064;DC0061,Process Creation;Service Creation;Command Execution;File Modification,DET0073,4
+T1570,Lateral Tool Transfer,attack-pattern--bf90d72c-c00b-45e3-b3aa-68560560d4c5,False,DC0039;DC0032;DC0059;DC0064;DC0102,File Creation;Process Creation;File Metadata;Command Execution;Network Share Access,DET0183,5
+T1571,Non-Standard Port,attack-pattern--b18eae87-b469-4e14-b454-b171b416bc18,False,DC0082;DC0085;DC0032;DC0038;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow,DET0227,5
+T1572,Protocol Tunneling,attack-pattern--4fe28b27-b13c-453e-a386-c2ef362a573b,False,DC0082;DC0085;DC0032;DC0038;DC0078,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow,DET0538,5
+T1573,Encrypted Channel,attack-pattern--b8902400-e6c5-4ba2-95aa-2d35b442b118,False,DC0082;DC0085;DC0032;DC0038;DC0078;DC0016,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow;Module Load,DET0273,6
+T1573.001,Symmetric Cryptography,attack-pattern--24bfaeba-cb0d-4525-b3dc-507c77ecec41,True,DC0082;DC0085;DC0032;DC0038;DC0078;DC0016,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow;Module Load,DET0143,6
+T1573.002,Asymmetric Cryptography,attack-pattern--bf176076-b789-408e-8cba-7275e81c0ada,True,DC0082;DC0085;DC0032;DC0038;DC0078;DC0016,Network Connection Creation;Network Traffic Content;Process Creation;Application Log Content;Network Traffic Flow;Module Load,DET0543,6
+T1574,Hijack Execution Flow,attack-pattern--aedfca76-3b30-4866-b2aa-0f1d7fd1e4b6,False,DC0039;DC0032;DC0041;DC0061;DC0016;DC0063,File Creation;Process Creation;Service Metadata;File Modification;Module Load;Windows Registry Key Modification,DET0218,6
+T1574.001,DLL,attack-pattern--2fee9321-3e71-4cf4-af24-d4d40d355b34,True,DC0039;DC0032;DC0059;DC0016;DC0063,File Creation;Process Creation;File Metadata;Module Load;Windows Registry Key Modification,DET0201,5
+T1574.004,Dylib Hijacking,attack-pattern--fc742192-19e3-466c-9eb5-964a97b29490,True,DC0039;DC0061;DC0016,File Creation;File Modification;Module Load,DET0152,3
+T1574.005,Executable Installer File Permissions Weakness,attack-pattern--70d81154-b187-45f9-8ec5-295d01255979,True,DC0039;DC0032;DC0059;DC0016,File Creation;Process Creation;File Metadata;Module Load,DET0038,4
+T1574.006,Dynamic Linker Hijacking,attack-pattern--633a100c-b2c9-41bf-9be5-905c1b16c825,True,DC0039;DC0032;DC0061;DC0016;DC0034,File Creation;Process Creation;File Modification;Module Load;Process Metadata,DET0435,5
+T1574.007,Path Interception by PATH Environment Variable,attack-pattern--0c2d00da-7742-49e7-9928-4514e5075d32,True,DC0039;DC0032;DC0061;DC0063,File Creation;Process Creation;File Modification;Windows Registry Key Modification,DET0004,4
+T1574.008,Path Interception by Search Order Hijacking,attack-pattern--58af3705-8740-4c68-9329-ec015a7013c2,True,DC0039;DC0032;DC0059,File Creation;Process Creation;File Metadata,DET0564,3
+T1574.009,Path Interception by Unquoted Path,attack-pattern--bf96a5a3-3bce-43b7-8597-88545984c07b,True,DC0039;DC0032;DC0059;DC0063,File Creation;Process Creation;File Metadata;Windows Registry Key Modification,DET0064,4
+T1574.010,Services File Permissions Weakness,attack-pattern--9e8b28c9-35fe-48ac-a14d-e6cc032dcbcd,True,DC0039;DC0032;DC0060;DC0059,File Creation;Process Creation;Service Creation;File Metadata,DET0436,4
+T1574.011,Services Registry Permissions Weakness,attack-pattern--17cc750b-e95b-4d7d-9dde-49e0de24148c,True,DC0032;DC0065;DC0063,Process Creation;Service Modification;Windows Registry Key Modification,DET0427,3
+T1574.012,COR_PROFILER,attack-pattern--ffeb0780-356e-4261-b036-cfb6bd234335,True,DC0039;DC0032;DC0016;DC0063,File Creation;Process Creation;Module Load;Windows Registry Key Modification,DET0479,4
+T1574.013,KernelCallbackTable,attack-pattern--a4657bc9-d22f-47d2-a7b7-dd6ec33f3dde,True,DC0035;DC0032;DC0021,Process Access;Process Creation;OS API Execution,DET0577,3
+T1574.014,AppDomainManager,attack-pattern--356662f7-e315-4759-86c9-6214e2a50ff8,True,DC0039;DC0032;DC0016,File Creation;Process Creation;Module Load,DET0517,3
+T1578,Modify Cloud Compute Infrastructure,attack-pattern--144e007b-e638-431d-a894-45d90c54ab90,False,DC0089;DC0049;DC0098;DC0057;DC0070;DC0092;DC0097;DC0058;DC0080,Instance Stop;Snapshot Deletion;Volume Deletion;Snapshot Creation;Cloud Service Metadata;Volume Modification;Volume Creation;Snapshot Modification;Instance Start,DET0308,9
+T1578.001,Create Snapshot,attack-pattern--ed2e45f9-d338-4eb2-8ce5-3a2e03323bc1,True,DC0057;DC0062,Snapshot Creation;Snapshot Metadata,DET0423,2
+T1578.002,Create Cloud Instance,attack-pattern--cf1c2504-433f-4c4e-a1f8-91de45a0318c,True,DC0086;DC0076;DC0080,Instance Metadata;Instance Creation;Instance Start,DET0449,3
+T1578.003,Delete Cloud Instance,attack-pattern--70857657-bd0b-4695-ad3e-b13f92cac1b4,True,DC0089;DC0086;DC0081,Instance Stop;Instance Metadata;Instance Deletion,DET0084,3
+T1578.004,Revert Cloud Instance,attack-pattern--0708ae90-d0eb-4938-9a76-d0fc94f6eec1,True,DC0089;DC0073;DC0080,Instance Stop;Instance Modification;Instance Start,DET0337,3
+T1578.005,Modify Cloud Compute Configurations,attack-pattern--ca00366b-83a1-4c7b-a0ce-8ff950a7c87f,True,DC0069,Cloud Service Modification,DET0492,1
+T1580,Cloud Infrastructure Discovery,attack-pattern--57a3d31a-d04f-4663-b2da-7df8ec3f8c9d,False,DC0075;DC0086;DC0017,Instance Enumeration;Instance Metadata;Cloud Storage Enumeration,DET0169,3
+T1583,Acquire Infrastructure,attack-pattern--0458aab9-ad42-4eac-9e22-706a95bafee2,False,DC0104;DC0106;DC0103;DC0096;DC0101,Response Content;Response Metadata;Active DNS;Passive DNS;Domain Registration,DET0895,5
+T1583.001,Domains,attack-pattern--40f5caa0-4cb7-4117-89fc-d421bb493df3,True,DC0103;DC0096;DC0101,Active DNS;Passive DNS;Domain Registration,DET0892,3
+T1583.002,DNS Server,attack-pattern--197ef1b9-e764-46c3-b96c-23f77985dc81,True,,,DET0862,0
+T1583.003,Virtual Private Server,attack-pattern--79da0971-3147-4af6-a4f5-e8cd447cd795,True,DC0104;DC0106,Response Content;Response Metadata,DET0838,2
+T1583.004,Server,attack-pattern--60c4b628-4807-4b0b-bbf5-fdac8643c337,True,DC0104;DC0106,Response Content;Response Metadata,DET0871,2
+T1583.005,Botnet,attack-pattern--31225cd3-cd46-4575-b287-c2c14011c074,True,,,DET0837,0
+T1583.006,Web Services,attack-pattern--88d31120-5bc7-4ce3-a9c0-7cf147be8e54,True,DC0104,Response Content,DET0896,1
+T1583.007,Serverless,attack-pattern--04a5a8ab-3bc8-4c83-95c9-55274a89786d,True,DC0104,Response Content,DET0829,1
+T1583.008,Malvertising,attack-pattern--155207c0-7f53-4f13-a06b-0a9907ef5096,True,DC0104,Response Content,DET0836,1
+T1584,Compromise Infrastructure,attack-pattern--7e3beebd-8bfe-4e7b-a892-e44ab06a75f9,False,DC0104;DC0106;DC0103;DC0096;DC0101,Response Content;Response Metadata;Active DNS;Passive DNS;Domain Registration,DET0885,5
+T1584.001,Domains,attack-pattern--f9cc4d06-775f-4ee1-b401-4e2cc0da30ba,True,DC0103;DC0096;DC0101,Active DNS;Passive DNS;Domain Registration,DET0863,3
+T1584.002,DNS Server,attack-pattern--c2f59d25-87fe-44aa-8f83-e8e59d077bf5,True,DC0103;DC0096,Active DNS;Passive DNS,DET0891,2
+T1584.003,Virtual Private Server,attack-pattern--39cc9f64-cf74-4a48-a4d8-fe98c54a02e0,True,DC0104;DC0106,Response Content;Response Metadata,DET0854,2
+T1584.004,Server,attack-pattern--e196b5c5-8118-4a1c-ab8a-936586ce3db5,True,DC0104;DC0106,Response Content;Response Metadata,DET0874,2
+T1584.005,Botnet,attack-pattern--810d8072-afb6-4a56-9ee7-86379ac4a6f3,True,,,DET0883,0
+T1584.006,Web Services,attack-pattern--ae797531-3219-49a4-bccf-324ad7a4c7b2,True,DC0104,Response Content,DET0882,1
+T1584.007,Serverless,attack-pattern--df1bc34d-1634-4c93-b89e-8120994fce77,True,DC0104,Response Content,DET0864,1
+T1584.008,Network Devices,attack-pattern--149b477f-f364-4824-b1b5-aa1d56115869,True,DC0104,Response Content,DET0859,1
+T1585,Establish Accounts,attack-pattern--cdfc5f0a-9bb9-4352-b896-553cfa2d8fd8,False,DC0085;DC0052,Network Traffic Content;Social Media,DET0873,2
+T1585.001,Social Media Accounts,attack-pattern--b1ccd744-3f78-4a0e-9bb2-2002057f7928,True,DC0085;DC0052,Network Traffic Content;Social Media,DET0851,2
+T1585.002,Email Accounts,attack-pattern--65013dd2-bc61-43e3-afb5-a14c4fa7437a,True,,,DET0835,0
+T1585.003,Cloud Accounts,attack-pattern--926d8cfd-1d0d-4da2-ab49-3ca10ec3f3b5,True,,,DET0846,0
+T1586,Compromise Accounts,attack-pattern--81033c3b-16a4-46e4-8fed-9b030dd03c4a,False,DC0085;DC0052,Network Traffic Content;Social Media,DET0876,2
+T1586.001,Social Media Accounts,attack-pattern--274770e0-2612-4ccf-a678-ef8e7bad365d,True,DC0085;DC0052,Network Traffic Content;Social Media,DET0870,2
+T1586.002,Email Accounts,attack-pattern--3dc8c101-d4db-4f4d-8150-1b5a76ca5f1b,True,,,DET0861,0
+T1586.003,Cloud Accounts,attack-pattern--3d52e51e-f6db-4719-813c-48002a99f43a,True,,,DET0879,0
+T1587,Develop Capabilities,attack-pattern--edadea33-549c-4ed1-9783-8f5a5853cbdf,False,DC0104;DC0011;DC0003,Response Content;Malware Content;Malware Metadata,DET0853,3
+T1587.001,Malware,attack-pattern--212306d8-efa4-44c9-8c2d-ed3d2e224aa0,True,DC0011;DC0003,Malware Content;Malware Metadata,DET0872,2
+T1587.002,Code Signing Certificates,attack-pattern--34b3f738-bd64-40e5-a112-29b0542bc8bf,True,DC0003,Malware Metadata,DET0833,1
+T1587.003,Digital Certificates,attack-pattern--1cec9319-743b-4840-bb65-431547bce82a,True,DC0104,Response Content,DET0844,1
+T1587.004,Exploits,attack-pattern--bbc3cba7-84ae-410d-b18b-16750731dfa2,True,,,DET0894,0
+T1588,Obtain Capabilities,attack-pattern--ce0687a0-e692-4b77-964a-0784a8e54ff1,False,DC0104;DC0011;DC0093;DC0003,Response Content;Malware Content;Certificate Registration;Malware Metadata,DET0850,4
+T1588.001,Malware,attack-pattern--7807d3a4-a885-4639-a786-c1ed41484970,True,DC0011;DC0003,Malware Content;Malware Metadata,DET0845,2
+T1588.002,Tool,attack-pattern--a2fdce72-04b2-409a-ac10-cc1695f4fce0,True,DC0003,Malware Metadata,DET0852,1
+T1588.003,Code Signing Certificates,attack-pattern--e7cbc1de-1f79-48ee-abfd-da1241c65a15,True,DC0003,Malware Metadata,DET0875,1
+T1588.004,Digital Certificates,attack-pattern--19401639-28d0-4c3c-adcc-bc2ba22f6421,True,DC0104;DC0093,Response Content;Certificate Registration,DET0848,2
+T1588.005,Exploits,attack-pattern--f4b843c1-7e92-4701-8fed-ce82f8be2636,True,,,DET0827,0
+T1588.006,Vulnerabilities,attack-pattern--2b5aa86b-a0df-4382-848d-30abea443327,True,,,DET0808,0
+T1588.007,Artificial Intelligence,attack-pattern--0cc222f5-c3ff-48e6-9f52-3314baf9d37e,True,,,DET0842,0
+T1589,Gather Victim Identity Information,attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4,False,DC0085,Network Traffic Content,DET0841,1
+T1589.001,Credentials,attack-pattern--bc76d0a4-db11-4551-9ac4-01a469cfb161,True,,,DET0813,0
+T1589.002,Email Addresses,attack-pattern--69f897fd-12a9-4c89-ad6a-46d2f3c38262,True,DC0085,Network Traffic Content,DET0814,1
+T1589.003,Employee Names,attack-pattern--76551c52-b111-4884-bc47-ff3e728f0156,True,,,DET0857,0
+T1590,Gather Victim Network Information,attack-pattern--9d48cab2-7929-4812-ad22-f536665f0109,False,,,DET0869,0
+T1590.001,Domain Properties,attack-pattern--e3b168bd-fcd7-439e-9382-2e6c2f63514d,True,,,DET0847,0
+T1590.002,DNS,attack-pattern--0ff59227-8aa8-4c09-bf1f-925605bd07ea,True,,,DET0843,0
+T1590.003,Network Trust Dependencies,attack-pattern--36aa137f-5166-41f8-b2f0-a4cfa1b4133e,True,,,DET0828,0
+T1590.004,Network Topology,attack-pattern--34ab90a3-05f6-4259-8f21-621081fdaba5,True,,,DET0819,0
+T1590.005,IP Addresses,attack-pattern--0dda99f0-4701-48ca-9774-8504922e92d3,True,,,DET0815,0
+T1590.006,Network Security Appliances,attack-pattern--6c2957f9-502a-478c-b1dd-d626c0659413,True,,,DET0889,0
+T1591,Gather Victim Org Information,attack-pattern--937e4772-8441-4e4a-8bf0-8d447d667e23,False,,,DET0890,0
+T1591.001,Determine Physical Locations,attack-pattern--ed730f20-0e44-48b9-85f8-0e2adeb76867,True,,,DET0806,0
+T1591.002,Business Relationships,attack-pattern--6ee2dc99-91ad-4534-a7d8-a649358c331f,True,,,DET0855,0
+T1591.003,Identify Business Tempo,attack-pattern--2339cf19-8f1e-48f7-8a91-0262ba547b6f,True,,,DET0849,0
+T1591.004,Identify Roles,attack-pattern--cc723aff-ec88-40e3-a224-5af9fd983cc4,True,,,DET0807,0
+T1592,Gather Victim Host Information,attack-pattern--09312b1a-c3c6-4b45-9844-3ccc78e5d82f,False,DC0104,Response Content,DET0826,1
+T1592.001,Hardware,attack-pattern--24286c33-d4a4-4419-85c2-1d094a896c26,True,DC0104,Response Content,DET0887,1
+T1592.002,Software,attack-pattern--baf60e1a-afe5-4d31-830f-1b1ba2351884,True,DC0104,Response Content,DET0888,1
+T1592.003,Firmware,attack-pattern--b85f6ce5-81e8-4f36-aff2-3df9d02a9c9d,True,,,DET0818,0
+T1592.004,Client Configurations,attack-pattern--774ad5bb-2366-4c13-a8a9-65e50b292e7c,True,DC0104,Response Content,DET0820,1
+T1593,Search Open Websites/Domains,attack-pattern--a0e6614a-7740-4b24-bd65-f1bde09fc365,False,,,DET0856,0
+T1593.001,Social Media,attack-pattern--bbe5b322-e2af-4a5e-9625-a4e62bf84ed3,True,,,DET0812,0
+T1593.002,Search Engines,attack-pattern--6e561441-8431-4773-a9b8-ccf28ef6a968,True,,,DET0811,0
+T1593.003,Code Repositories,attack-pattern--70910fbd-58dc-4c1c-8c48-814d11fcd022,True,,,DET0805,0
+T1594,Search Victim-Owned Websites,attack-pattern--16cdd21f-da65-4e4f-bc04-dd7d198c7b26,False,DC0038,Application Log Content,DET0810,1
+T1595,Active Scanning,attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b,False,DC0085;DC0078,Network Traffic Content;Network Traffic Flow,DET0830,2
+T1595.001,Scanning IP Blocks,attack-pattern--db8f5003-3b20-48f0-9b76-123e44208120,True,DC0085;DC0078,Network Traffic Content;Network Traffic Flow,DET0817,2
+T1595.002,Vulnerability Scanning,attack-pattern--5502c4e9-24ef-4d5f-8ee9-9e906c2f82c4,True,DC0085;DC0078,Network Traffic Content;Network Traffic Flow,DET0867,2
+T1595.003,Wordlist Scanning,attack-pattern--bed04f7d-e48a-4e76-bd0f-4c57fe31fc46,True,DC0085,Network Traffic Content,DET0868,1
+T1596,Search Open Technical Databases,attack-pattern--55fc4df0-b42c-479a-b860-7a6761bcaad0,False,,,DET0860,0
+T1596.001,DNS/Passive DNS,attack-pattern--17fd695c-b88c-455a-a3d1-43b6cb728532,True,,,DET0877,0
+T1596.002,WHOIS,attack-pattern--166de1c6-2814-4fe5-8438-4e80f76b169f,True,,,DET0832,0
+T1596.003,Digital Certificates,attack-pattern--0979abf9-4e26-43ec-9b6e-54efc4e70fca,True,,,DET0831,0
+T1596.004,CDNs,attack-pattern--91177e6d-b616-4a03-ba4b-f3b32f7dda75,True,,,DET0809,0
+T1596.005,Scan Databases,attack-pattern--ec4be82f-940c-4dcb-87fe-2bbdd17c692f,True,,,DET0858,0
+T1597,Search Closed Sources,attack-pattern--a51eb150-93b1-484b-a503-e51453b127a4,False,,,DET0822,0
+T1597.001,Threat Intel Vendors,attack-pattern--51e54974-a541-4fb6-a61b-0518e4c6de41,True,,,DET0816,0
+T1597.002,Purchase Technical Data,attack-pattern--0a241b6c-7bb2-48f9-98f7-128145b4d27f,True,,,DET0880,0
+T1598,Phishing for Information,attack-pattern--cca0ccb6-a068-4574-a722-b1556f86833a,False,DC0085;DC0038;DC0078,Network Traffic Content;Application Log Content;Network Traffic Flow,DET0823,3
+T1598.001,Spearphishing Service,attack-pattern--f870408c-b1cd-49c7-a5c7-0ef0fc496cc6,True,DC0085;DC0038;DC0078,Network Traffic Content;Application Log Content;Network Traffic Flow,DET0821,3
+T1598.002,Spearphishing Attachment,attack-pattern--8982a661-d84c-48c0-b4ec-1db29c6cf3bc,True,DC0085;DC0038;DC0078,Network Traffic Content;Application Log Content;Network Traffic Flow,DET0865,3
+T1598.003,Spearphishing Link,attack-pattern--2d3f5b3c-54ca-4f4d-bb1f-849346d31230,True,DC0085;DC0038;DC0078,Network Traffic Content;Application Log Content;Network Traffic Flow,DET0878,3
+T1598.004,Spearphishing Voice,attack-pattern--6a5d222a-a7e0-4656-b110-782c33098289,True,DC0038,Application Log Content,DET0886,1
+T1599,Network Boundary Bridging,attack-pattern--b8017880-4b1e-42de-ad10-ae7ac6705166,False,DC0085;DC0078,Network Traffic Content;Network Traffic Flow,DET0006,2
+T1599.001,Network Address Translation Traversal,attack-pattern--4ffc1794-ec3b-45be-9e52-42dbcb2af2de,True,DC0085;DC0078,Network Traffic Content;Network Traffic Flow,DET0163,2
+T1600,Weaken Encryption,attack-pattern--1f9012ef-1e10-4e48-915e-e03563435fe8,False,DC0085;DC0061;DC0016,Network Traffic Content;File Modification;Module Load,DET0339,3
+T1600.001,Reduce Key Space,attack-pattern--3a40f208-a9c1-4efa-a598-4003c3681fb8,True,DC0085;DC0064;DC0061,Network Traffic Content;Command Execution;File Modification,DET0243,3
+T1600.002,Disable Crypto Hardware,attack-pattern--7efba77e-3bc4-4ca5-8292-d8201dcd64b5,True,DC0085;DC0064;DC0061,Network Traffic Content;Command Execution;File Modification,DET0494,3
+T1601,Modify System Image,attack-pattern--ae7f3575-0a5e-427e-991b-fe03ad44c754,False,DC0064;DC0061,Command Execution;File Modification,DET0170,2
+T1601.001,Patch System Image,attack-pattern--d245808a-7086-4310-984a-a84aaaa43f8f,True,DC0064;DC0061;DC0004,Command Execution;File Modification;Firmware Modification,DET0469,3
+T1601.002,Downgrade System Image,attack-pattern--fc74ba38-dc98-461f-8611-b3dbf9978e3d,True,DC0059;DC0064;DC0061,File Metadata;Command Execution;File Modification,DET0569,3
+T1602,Data from Configuration Repository,attack-pattern--0ad7bc5c-235a-4048-944b-3b286676cb74,False,DC0082;DC0085,Network Connection Creation;Network Traffic Content,DET0592,2
+T1602.001,SNMP (MIB Dump),attack-pattern--ee7ff928-801c-4f34-8a99-3df965e581a5,True,DC0082;DC0085;DC0061,Network Connection Creation;Network Traffic Content;File Modification,DET0453,3
+T1602.002,Network Device Configuration Dump,attack-pattern--52759bf1-fe12-4052-ace6-c5b0cf7dd7fd,True,DC0082;DC0085;DC0064;DC0002,Network Connection Creation;Network Traffic Content;Command Execution;User Account Authentication,DET0233,4
+T1606,Forge Web Credentials,attack-pattern--94cb00a4-b295-4d06-aa2b-5653b9c1be9c,False,DC0035;DC0055;DC0085;DC0006;DC0067;DC0007,Process Access;File Access;Network Traffic Content;Web Credential Creation;Logon Session Creation;Web Credential Usage,DET0260,6
+T1606.001,Web Cookies,attack-pattern--861b8fd2-57f3-4ee1-ab5d-c19c3b8c7a4a,True,DC0082;DC0055;DC0039;DC0067;DC0007,Network Connection Creation;File Access;File Creation;Logon Session Creation;Web Credential Usage,DET0171,5
+T1606.002,SAML Tokens,attack-pattern--1f9c2bae-b441-4f66-a8af-b65946ee72f2,True,DC0088;DC0006;DC0067;DC0002;DC0007,Logon Session Metadata;Web Credential Creation;Logon Session Creation;User Account Authentication;Web Credential Usage,DET0148,5
+T1608,Stage Capabilities,attack-pattern--84771bc3-f6a0-403e-b144-01af70e5fda0,False,DC0104,Response Content,DET0839,1
+T1608.001,Upload Malware,attack-pattern--3ee16395-03f0-4690-a32e-69ce9ada0f9e,True,DC0104,Response Content,DET0824,1
+T1608.002,Upload Tool,attack-pattern--506f6f49-7045-4156-9007-7474cb44ad6d,True,DC0104,Response Content,DET0834,1
+T1608.003,Install Digital Certificate,attack-pattern--c071d8c1-3b3a-4f22-9407-ca4e96921069,True,DC0104,Response Content,DET0840,1
+T1608.004,Drive-by Target,attack-pattern--31fe0ba2-62fd-4fd9-9293-4043d84f7fe9,True,DC0104,Response Content,DET0825,1
+T1608.005,Link Target,attack-pattern--84ae8255-b4f4-4237-b5c5-e717405a9701,True,DC0104,Response Content,DET0893,1
+T1608.006,SEO Poisoning,attack-pattern--e5d550f3-2202-4634-85f2-4a200a1d49b3,True,DC0104,Response Content,DET0881,1
+T1609,Container Administration Command,attack-pattern--7b50a1d3-4ca7-45d1-989d-a6503f04bfe1,False,DC0032;DC0064,Process Creation;Command Execution,DET0065,2
+T1610,Deploy Container,attack-pattern--56e0d8b8-3e25-49dd-9050-3aa252f5aa92,False,DC0085;DC0032;DC0077;DC0038,Network Traffic Content;Process Creation;Container Start;Application Log Content,DET0249,4
+T1611,Escape to Host,attack-pattern--4a5b7ade-8bb5-4853-84ed-23f262002665,False,DC0031;DC0039;DC0032;DC0021;DC0072;DC0092,Kernel Module Load;File Creation;Process Creation;OS API Execution;Container Creation;Volume Modification,DET0219,6
+T1612,Build Image on Host,attack-pattern--800f9819-7007-4540-a520-40e655876800,False,DC0082;DC0015,Network Connection Creation;Image Creation,DET0459,2
+T1613,Container and Resource Discovery,attack-pattern--0470e792-32f8-46b0-a351-652bc35e9336,False,DC0037;DC0091,Pod Enumeration;Container Enumeration,DET0490,2
+T1614,System Location Discovery,attack-pattern--c877e33f-1df6-40d6-b1e7-ce70f16f4979,False,DC0085;DC0032;DC0064;DC0021,Network Traffic Content;Process Creation;Command Execution;OS API Execution,DET0043,4
+T1614.001,System Language Discovery,attack-pattern--c1b68a96-3c48-49ea-a6c0-9b27359f9c19,True,DC0032;DC0064;DC0021;DC0050,Process Creation;Command Execution;OS API Execution;Windows Registry Key Access,DET0565,4
+T1615,Group Policy Discovery,attack-pattern--1b20efbf-8063-4fc3-a07d-b575318a301b,False,DC0085;DC0032;DC0071;DC0064,Network Traffic Content;Process Creation;Active Directory Object Access;Command Execution,DET0055,4
+T1619,Cloud Storage Object Discovery,attack-pattern--8565825b-21c8-4518-b75e-cbc4c717a156,False,DC0025;DC0017,Cloud Storage Access;Cloud Storage Enumeration,DET0578,2
+T1620,Reflective Code Loading,attack-pattern--4933e63b-9b77-476e-ab29-761bc5b7d15a,False,DC0035;DC0032;DC0021;DC0029;DC0016,Process Access;Process Creation;OS API Execution;Script Execution;Module Load,DET0300,5
+T1621,Multi-Factor Authentication Request Generation,attack-pattern--954a1639-f2d6-407d-aef3-4917622ca493,False,DC0088;DC0038;DC0002,Logon Session Metadata;Application Log Content;User Account Authentication,DET0160,3
+T1622,Debugger Evasion,attack-pattern--e4dc8c01-417f-458d-9ee0-bb0617c1b391,False,DC0055;DC0032;DC0021,File Access;Process Creation;OS API Execution,DET0371,3
+T1647,Plist File Modification,attack-pattern--7d20fff9-8751-404e-badd-ccd71bda0236,False,DC0032;DC0064;DC0061,Process Creation;Command Execution;File Modification,DET0109,3
+T1648,Serverless Execution,attack-pattern--e848506b-8484-4410-8017-3d235a52f5b3,False,DC0038;DC0069,Application Log Content;Cloud Service Modification,DET0374,2
+T1649,Steal or Forge Authentication Certificates,attack-pattern--7de1f7ac-5d0c-4c9c-8873-627202205331,False,DC0084;DC0055;DC0066;DC0064;DC0038;DC0050,Active Directory Credential Request;File Access;Active Directory Object Modification;Command Execution;Application Log Content;Windows Registry Key Access,DET0240,6
+T1650,Acquire Access,attack-pattern--d21bb61f-08ad-4dc1-b001-81ca6cb79954,False,,,DET0884,0
+T1651,Cloud Administration Command,attack-pattern--d94b3ae9-8059-4989-8e9f-ea0f601f80a7,False,DC0032;DC0064;DC0029,Process Creation;Command Execution;Script Execution,DET0545,3
+T1652,Device Driver Discovery,attack-pattern--215d9700-5881-48b8-8265-6449dbb7195d,False,DC0055;DC0032;DC0064;DC0063,File Access;Process Creation;Command Execution;Windows Registry Key Modification,DET0579,4
+T1653,Power Settings,attack-pattern--ea071aa0-8f17-416f-ab0d-2bab7e79003d,False,DC0032;DC0064;DC0061,Process Creation;Command Execution;File Modification,DET0417,3
+T1654,Log Enumeration,attack-pattern--866d0d6d-02c6-42bd-aa2f-02907fdc0969,False,DC0055;DC0032;DC0064,File Access;Process Creation;Command Execution,DET0255,3
+T1656,Impersonation,attack-pattern--c9e0c59e-162e-40a4-b8b1-78fab4329ada,False,DC0064;DC0038;DC0067,Command Execution;Application Log Content;Logon Session Creation,DET0286,3
+T1657,Financial Theft,attack-pattern--851e071f-208d-4c79-adc6-5974c85c78f3,False,DC0032;DC0064;DC0061;DC0038;DC0067,Process Creation;Command Execution;File Modification;Application Log Content;Logon Session Creation,DET0495,5
+T1659,Content Injection,attack-pattern--43c9bc06-715b-42db-972f-52d25c09a20c,False,DC0039;DC0085;DC0032;DC0064,File Creation;Network Traffic Content;Process Creation;Command Execution,DET0349,4
+T1665,Hide Infrastructure,attack-pattern--eb897572-8979-4242-a089-56f294f4c91d,False,DC0104;DC0106;DC0082;DC0085;DC0032;DC0101,Response Content;Response Metadata;Network Connection Creation;Network Traffic Content;Process Creation;Domain Registration,DET0411,6
+T1666,Modify Cloud Resource Hierarchy,attack-pattern--0ce73446-8722-4086-9d43-514f1d0f669e,False,DC0069,Cloud Service Modification,DET0155,1
+T1667,Email Bombing,attack-pattern--bed81616-3dde-4685-be6e-ba9820f9a7ed,False,DC0039;DC0038,File Creation;Application Log Content,DET0355,2
+T1668,Exclusive Control,attack-pattern--dff263cc-328e-42b4-afbc-1fee8b6a8913,False,DC0032;DC0033;DC0064,Process Creation;Process Termination;Command Execution,DET0015,3
+T1669,Wi-Fi Networks,attack-pattern--fde016f6-211a-41c8-a4ab-301f1e419c62,False,DC0082;DC0085;DC0078;DC0002;DC0051,Network Connection Creation;Network Traffic Content;Network Traffic Flow;User Account Authentication;Firewall Rule Modification,DET0536,5
+T1671,Cloud Application Integration,attack-pattern--c31aebd6-c9b5-420f-ba2a-5853bbf897fa,False,DC0066;DC0038;DC0069,Active Directory Object Modification;Application Log Content;Cloud Service Modification,DET0539,3
+T1672,Email Spoofing,attack-pattern--e1c2db92-7ae3-4e6a-90b4-157c1c1565cb,False,DC0038,Application Log Content,DET0431,1
+T1673,Virtual Machine Discovery,attack-pattern--6bc7f9aa-b91f-4b23-84b8-5e756eba68eb,False,DC0032;DC0064,Process Creation;Command Execution,DET0199,2
+T1674,Input Injection,attack-pattern--63e3d25c-d57d-407d-8e6a-2cecd71f90be,False,DC0032;DC0042;DC0064;DC0029,Process Creation;Drive Creation;Command Execution;Script Execution,DET0568,4
+T1675,ESXi Administration Command,attack-pattern--31e5011f-090e-45be-9bb6-17a1c5e8219b,False,DC0038,Application Log Content,DET0232,1
+T1677,Poisoned Pipeline Execution,attack-pattern--7655ac3b-dfde-49c5-a967-242856174434,False,DC0025;DC0059;DC0064;DC0070;DC0069,Cloud Storage Access;File Metadata;Command Execution;Cloud Service Metadata;Cloud Service Modification,DET0533,5
+T1678,Delay Execution,attack-pattern--a1df809c-7d0e-459f-8fe5-25474bab770b,False,DC0032;DC0029;DC0016,Process Creation;Script Execution;Module Load,DET0372,3
+T1679,Selective Exclusion,attack-pattern--9b00925a-7c4b-4e53-bfc8-9a6a806fde03,False,DC0032;DC0064;DC0061,Process Creation;Command Execution;File Modification,DET0897,3
+T1680,Local Storage Discovery,attack-pattern--f2514ae4-4e9b-4f26-a5ba-c4ae85fe93c3,False,DC0032;DC0064;DC0002,Process Creation;Command Execution;User Account Authentication,DET0188,3
+T1681,Search Threat Vendor Data,attack-pattern--63b24abc-5702-4745-b1e4-ac70b20a43f2,False,,,DET0866,0
