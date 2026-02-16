@@ -43,6 +43,13 @@ def main() -> int:
     analytics = {o["id"]: o for o in objects if o.get("type") == "x-mitre-analytic"}
     dets = {o["id"]: o for o in objects if o.get("type") == "x-mitre-detection-strategy"}
     techniques = {o["id"]: o for o in objects if o.get("type") == "attack-pattern"}
+    tactics = {o["id"]: o for o in objects if o.get("type") == "x-mitre-tactic"}
+
+    tactic_short_lookup = {}
+    for tactic_id, tactic in tactics.items():
+        short_name = tactic.get("x_mitre_shortname")
+        if isinstance(short_name, str) and short_name:
+            tactic_short_lookup.setdefault(short_name, tactic_id)
 
     # Analytic -> DC
     analytic_to_dc = {}
@@ -88,6 +95,19 @@ def main() -> int:
         dc_refs = sorted(technique_map[tech_id]["dc"])
         det_refs = sorted(technique_map[tech_id]["det"])
 
+        tactic_refs = []
+        seen_tactics = set()
+        for phase in tech.get("kill_chain_phases", []) or []:
+            if not isinstance(phase, dict):
+                continue
+            short_name = phase.get("phase_name")
+            if not isinstance(short_name, str):
+                continue
+            tactic_id = tactic_short_lookup.get(short_name)
+            if tactic_id and tactic_id not in seen_tactics:
+                seen_tactics.add(tactic_id)
+                tactic_refs.append(tactic_id)
+
         rows.append({
             "technique_id": get_external_id(tech, "T"),
             "technique_name": tech.get("name", ""),
@@ -96,6 +116,8 @@ def main() -> int:
             "dc_ids": ";".join(get_external_id(dcs[dc], "DC") for dc in dc_refs),
             "dc_names": ";".join(dcs[dc].get("name", "") for dc in dc_refs),
             "det_ids": ";".join(get_external_id(dets[det], "DET") for det in det_refs),
+            "strategy_ids": ";".join(get_external_id(tactics[tid], "TA") for tid in tactic_refs),
+            "strategy_names": ";".join(tactics[tid].get("name", "") for tid in tactic_refs),
             "dc_count": len(dc_refs),
         })
 
@@ -109,6 +131,8 @@ def main() -> int:
         "dc_ids",
         "dc_names",
         "det_ids",
+        "strategy_ids",
+        "strategy_names",
         "dc_count",
     ]
 
